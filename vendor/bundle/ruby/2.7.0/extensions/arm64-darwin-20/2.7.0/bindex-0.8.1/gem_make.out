@@ -1,0 +1,15 @@
+current directory: /Users/tshirt/Desktop/mulunch_blog/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+/Users/tshirt/.rbenv/versions/2.7.2/bin/ruby -I /Users/tshirt/.rbenv/versions/2.7.2/lib/ruby/site_ruby/2.7.0 -r ./siteconf20210416-31969-17oi6v5.rb extconf.rb
+creating Makefile
+
+current directory: /Users/tshirt/Desktop/mulunch_blog/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= clean
+
+current directory: /Users/tshirt/Desktop/mulunch_blog/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\=
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/tshirt/Desktop/mulunch_blog/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20210416-31969-lu4j5w/skiptrace/internal

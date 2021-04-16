@@ -1,0 +1,15 @@
+current directory: /Users/tshirt/Desktop/mulunch_blog/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.3/ext/bootsnap
+/Users/tshirt/.rbenv/versions/2.7.2/bin/ruby -I /Users/tshirt/.rbenv/versions/2.7.2/lib/ruby/site_ruby/2.7.0 -r ./siteconf20210416-31969-ey7tow.rb extconf.rb
+creating Makefile
+
+current directory: /Users/tshirt/Desktop/mulunch_blog/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.3/ext/bootsnap
+make DESTDIR\= clean
+
+current directory: /Users/tshirt/Desktop/mulunch_blog/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.3/ext/bootsnap
+make DESTDIR\=
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/tshirt/Desktop/mulunch_blog/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.3/ext/bootsnap
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20210416-31969-1krjkre/bootsnap
