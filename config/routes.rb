@@ -24,5 +24,4 @@ Rails.application.routes.draw do
   post "posts/:id/destroy" => "posts#destroy"
 
   get "/" => "home#top"
-  get "about" => "home#about"
 end
