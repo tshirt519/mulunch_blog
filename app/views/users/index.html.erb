@@ -8,8 +8,11 @@
         </div>
         <div class="user-right">
           <%= link_to(user.name, "/users/#{user.id}") %>
-        </div>
-      </div>
+          </div>
+          </div>
     <% end %>
+    
+    <%= link_to("ログアウト", "/logout", {method: "post"}) %>
+
   </div>
 </div>

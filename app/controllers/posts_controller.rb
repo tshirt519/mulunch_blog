@@ -8,8 +8,7 @@ class PostsController < ApplicationController
   
   def show
     @post = Post.find_by(id: params[:id])
-    @user = @post.user
-    @likes_count = Like.where(post_id: @post.id).count
+    # @user = @post.user
   end
   
   def new
@@ -19,7 +18,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(
       content: params[:content],
-      user_id: @current_user.id
+      # user_id: @current_user.id
     )
     if @post.save
       flash[:notice] = "投稿を作成しました"
