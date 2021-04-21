@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
-  before_action :set_current_user, {only: [:new, :create, :edit, :update, :destroy]}
-  before_action :set_guest_user
+  # before_action :set_current_user, {only: [:new, :create, :edit, :update, :destroy]}
+  # before_action :set_guest_user
   
   def set_current_user
     @current_user = User.find_by(id: session[:user_id])
@@ -18,13 +18,6 @@ class ApplicationController < ActionController::Base
       flash[:notice] = "すでにログインしています"
       redirect_to("/posts/index")
     end
-  end
-
-  def set_guest_user
-    if  user.id:nil || post.id:nil
-      
-    end
-
   end
 
 end
