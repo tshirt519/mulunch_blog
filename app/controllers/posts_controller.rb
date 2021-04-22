@@ -17,6 +17,7 @@ class PostsController < ApplicationController
   
   def create
     @post = Post.new(
+      title: params[:title],
       content: params[:content],
       # user_id: @current_user.id
     )
@@ -34,6 +35,7 @@ class PostsController < ApplicationController
   
   def update
     @post = Post.find_by(id: params[:id])
+    @post.title = params[:title]
     @post.content = params[:content]
     if @post.save
       flash[:notice] = "投稿を編集しました"

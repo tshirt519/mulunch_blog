@@ -9,6 +9,7 @@
           <div class="post-user-name">
 
           </div>
+          <%= link_to(post.title, "/posts/#{post.id}") %>
           <%= link_to(post.content, "/posts/#{post.id}") %>
         </div>
       </div>
