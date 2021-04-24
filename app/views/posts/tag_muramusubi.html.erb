@@ -3,7 +3,7 @@
     <% @posts.each do |post| %>
       <div class="posts-index-item">
         <div class="post-left">
-          
+
         </div>
         <div class="post-right">
           <div class="post-user-name">
@@ -17,7 +17,7 @@
             <%= link_to(post.content, "/posts/#{post.id}") %>
           </div>
           <div class="post-tag">
-              <%= link_to("タグ：#{post.tag}", "/posts/tag_#{post.tag}") %>
+            <%= link_to("タグ：#{post.tag}", "/posts/tag_#{post.tag}") %>
           </div>
         </div>
       </div>

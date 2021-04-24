@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   post "logout" => "users#logout"
   get "login" => "users#login_form"
 
+  get "posts/tag_muramusubi" => "posts#tag_muramusubi"
+  get "posts/tag_villages" => "posts#tag_villages"
   get "posts/index" => "posts#index"
   get "posts/new" => "posts#new"
   get "posts/:id" => "posts#show"

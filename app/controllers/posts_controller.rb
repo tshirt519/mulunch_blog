@@ -66,5 +66,13 @@ class PostsController < ApplicationController
       redirect_to("/posts/index")
     end
   end
-  
+
+  def tag_muramusubi
+    @posts = Post.where(tag: "muramusubi").order(created_at: :desc)
+  end
+
+  def tag_villages
+    @posts = Post.where(tag: "villages").order(created_at: :desc)
+  end
+
 end
