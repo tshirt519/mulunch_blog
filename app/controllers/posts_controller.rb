@@ -8,7 +8,6 @@ class PostsController < ApplicationController
   
   def show
     @post = Post.find_by(id: params[:id])
-    # @user = @post.user
   end
   
   def new
@@ -19,7 +18,7 @@ class PostsController < ApplicationController
     @post = Post.new(
       title: params[:title],
       content: params[:content],
-      article: params[:article],
+      article: params[:article]
     )
     if @post.save
       flash[:notice] = "投稿を作成しました"
