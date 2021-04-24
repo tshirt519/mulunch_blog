@@ -9,8 +9,14 @@
           <div class="post-user-name">
 
           </div>
-          <%= link_to(post.title, "/posts/#{post.id}") %>
-          <%= link_to(post.content, "/posts/#{post.id}") %>
+          <div class="post-title">
+            <%= link_to(post.title, "/posts/#{post.id}") %>
+          </div>
+          <div class="post-content">
+            <%= link_to(post.content, "/posts/#{post.id}") %>
+          </div>
+          <div class="post-article">
+          </div>
         </div>
       </div>
     <% end %>
