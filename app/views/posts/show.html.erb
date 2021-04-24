@@ -4,13 +4,16 @@
       <div class="post-user-name">
 
       </div>
-      <p>
+      <p class="posts-show-title">
         <%= @post.title %>
       </p>
-      <p>
+      <p class="posts-show-thumbnail">
+        <img src="<%= "/post_thumbnails/#{@post.thumbnail}" %>">
+      </p>
+      <p class="posts-show-content">
         <%= @post.content %>
       </p>
-      <p>
+      <p class="posts-show-article">
         <%= @post.article %>
       </p>
       <div class="post-time">

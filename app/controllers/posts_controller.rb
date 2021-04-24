@@ -18,7 +18,8 @@ class PostsController < ApplicationController
     @post = Post.new(
       title: params[:title],
       content: params[:content],
-      article: params[:article]
+      article: params[:article],
+      thumbnail: "default_thumbnail.jpg" 
     )
     if @post.save
       flash[:notice] = "投稿を作成しました"
@@ -37,6 +38,12 @@ class PostsController < ApplicationController
     @post.title = params[:title]
     @post.content = params[:content]
     @post.article = params[:article]
+    if params[:image]
+      @post.thumbnail = "#{@post.id}.jpg"
+      image = params[:image]
+      File.binwrite("public/post_thumbnails/#{@post.thumbnail}", image.read)
+    end
+
     if @post.save
       flash[:notice] = "投稿を編集しました"
       redirect_to("/posts/index")
