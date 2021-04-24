@@ -19,6 +19,7 @@ class PostsController < ApplicationController
       title: params[:title],
       content: params[:content],
       article: params[:article],
+      tag: params[:tag],
       thumbnail: "default_thumbnail.jpg" 
     )
     if @post.save
@@ -38,6 +39,7 @@ class PostsController < ApplicationController
     @post.title = params[:title]
     @post.content = params[:content]
     @post.article = params[:article]
+    @post.tag = params[:tag]
     if params[:image]
       @post.thumbnail = "#{@post.id}.jpg"
       image = params[:image]

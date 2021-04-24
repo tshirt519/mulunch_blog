@@ -17,7 +17,7 @@
         <%= @post.article %>
       </p>
       <p class="posts-show-tag">
-        <%= @post.tag %>
+        <%= link_to("タグ：#{@post.tag}", "/posts/tag_#{@post.tag}") %>
       </p>
       <div class="post-time">
         <%= @post.created_at %>
