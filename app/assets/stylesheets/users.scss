@@ -1,4 +1,15 @@
 /* users/index ================================ */
+.logout-button {
+  text-align: center;
+  margin-top: 50px;
+}
+.logout-button a {
+  padding: 15px;
+  border-radius: 50px;
+  background: #de9044;
+  color: #fff;
+}
+
 .users-heading {
   font-weight: 300;
   margin: 60px 0 20px;
