@@ -1,4 +1,8 @@
 /* posts/index ================================ */
+.post-title {
+  margin: 20px 0 0;
+}
+
 .post-content a:hover {
   opacity: 0.6;
 }
@@ -60,7 +64,6 @@
 .post-title a {
   font-weight: bold;
   font-size: 20px;
-  padding: 20px 0;
 }
 
 .post-title a:hover {
