@@ -2,13 +2,10 @@
   <div class="container">
     <% @posts.each do |post| %>
       <div class="posts-index-item">
-        <div class="post-left">
-
+        <div class="post-user">
+        
         </div>
-        <div class="post-right">
-          <div class="post-user-name">
-
-          </div>
+        <div class="post-main">
           <div class="post-title">
             <%= link_to(post.title, "/posts/#{post.id}") %>
           </div>

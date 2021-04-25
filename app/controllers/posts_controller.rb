@@ -20,7 +20,8 @@ class PostsController < ApplicationController
       content: params[:content],
       article: params[:article],
       tag: params[:tag],
-      thumbnail: "default_thumbnail.jpg" 
+      thumbnail: "default_thumbnail.jpg",
+      user_id: 1 #仮のユーザーid
     )
     if @post.save
       flash[:notice] = "投稿を作成しました"
