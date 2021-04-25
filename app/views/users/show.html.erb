@@ -6,14 +6,13 @@
       <p><%= @user.email %></p>
         <%= link_to("編集", "/users/#{@user.id}/edit") %>
         <%= link_to("削除", "/users/#{@user.id}/destroy", {method: "post"}) %>
-
     </div>
     
     <ul class="user-tabs">
       <li class="active"><%= link_to("投稿", "/users/#{@user.id}") %></li>
     </ul>
     
-    <% @user.posts.each do |post| %>
+    <% @user.post.each do |post| %>
       <div class="posts-index-item">
         <div class="post-left">
           <img src="<%= "/user_images/#{post.user.image_name}" %>">
