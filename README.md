@@ -23,3 +23,6 @@ Things you may want to cover:
 
 * ...
 # mulunch_blog
+
+20210425
+セキュリティパスpush注意...（awsなどでありうる）
