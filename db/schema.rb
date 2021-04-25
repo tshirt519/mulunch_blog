@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_24_063846) do
+ActiveRecord::Schema.define(version: 2021_04_25_074705) do
 
   create_table "likes", force: :cascade do |t|
     t.integer "user_id"
@@ -25,9 +25,17 @@ ActiveRecord::Schema.define(version: 2021_04_24_063846) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
     t.text "title"
-    t.text "article"
-    t.string "thumbnail"
+    t.text "article1"
+    t.string "thumbnail1"
     t.string "tag"
+    t.text "article2"
+    t.text "article3"
+    t.text "article4"
+    t.text "article5"
+    t.string "thumbnail2"
+    t.string "thumbnail3"
+    t.string "thumbnail4"
+    t.string "thumbnail5"
   end
 
   create_table "users", force: :cascade do |t|

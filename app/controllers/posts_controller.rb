@@ -18,9 +18,17 @@ class PostsController < ApplicationController
     @post = Post.new(
       title: params[:title],
       content: params[:content],
-      article: params[:article],
+      article1: params[:article1],
+      article2: params[:article2],
+      article3: params[:article3],
+      article4: params[:article4],
+      article5: params[:article5],
       tag: params[:tag],
-      thumbnail: "default_thumbnail.jpg",
+      thumbnail1: "default_thumbnail.jpg",
+      thumbnail2: "default_thumbnail.jpg",
+      thumbnail3: "default_thumbnail.jpg",
+      thumbnail4: "default_thumbnail.jpg",
+      thumbnail5: "default_thumbnail.jpg",
       user_id: 1 #仮のユーザーid
     )
     if @post.save
@@ -39,7 +47,11 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: params[:id])
     @post.title = params[:title]
     @post.content = params[:content]
-    @post.article = params[:article]
+    @post.article1 = params[:article1]
+    @post.article2 = params[:article2]
+    @post.article3 = params[:article3]
+    @post.article4 = params[:article4]
+    @post.article5 = params[:article5]
     @post.tag = params[:tag]
     if params[:image]
       @post.thumbnail = "#{@post.id}.jpg"

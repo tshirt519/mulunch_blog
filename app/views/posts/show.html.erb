@@ -1,23 +1,33 @@
 <div class="main posts-show">
   <div class="container">
     <div class="posts-index-item">
-      <div class="post-user">
-        <%= link_to image_tag("/user_images/#{@post.user.image_name}", class:"post-user-image"), "/users/#{@post.user.id}" %>
-
-        <%= link_to("#{@post.user.name}", "/users/#{@post.user.id}", class: "post-user-name") %>
+      <div class="post-heading">
+        <div class="post-user">
+          <%= link_to image_tag("/user_images/#{@post.user.image_name}", class:"post-user-image"), "/users/#{@post.user.id}" %>
+          <%= link_to("#{@post.user.name}", "/users/#{@post.user.id}", class: "post-user-name") %>
+        </div>
+        <div class="post-menus">
+          <%= link_to("編集", "/posts/#{@post.id}/edit") %>
+          <%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
+        </div>
       </div>
+      
       <p class="posts-show-title">
         <%= @post.title %>
       </p>
-      <p class="posts-show-thumbnail">
-        <img src="<%= "/post_thumbnails/#{@post.thumbnail}" %>">
-      </p>
+      <div class="posts-show-thumbnail">
+        <img src="<%= "/post_thumbnails/#{@post.thumbnail1}" %>">
+      </div>
       <p class="posts-show-content">
         <%= @post.content %>
       </p>
-      <p class="posts-show-article">
-        <%= @post.article %>
-      </p>
+      <div class="posts-show-article">
+        <p class="post-article"><%= @post.article1 %></p>
+        <p class="post-article"><%= @post.article2 %></p>
+        <p class="post-article"><%= @post.article3 %></p>
+        <p class="post-article"><%= @post.article4 %></p>
+        <p class="post-article"><%= @post.article5 %></p>
+      </div>
       <p class="posts-show-tag">
         <%= link_to("タグ：#{@post.tag}", "/posts/tag_#{@post.tag}") %>
       </p>
@@ -25,10 +35,6 @@
         <%= @post.created_at %>
       </div>
 
-      <div class="post-menus">
-        <%= link_to("編集", "/posts/#{@post.id}/edit") %>
-        <%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
-      </div>
     </div>
   </div>
 </div>
