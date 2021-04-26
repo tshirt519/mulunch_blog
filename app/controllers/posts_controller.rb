@@ -26,10 +26,6 @@ class PostsController < ApplicationController
       article5: params[:article5],
       tag: params[:tag],
       thumbnail1: "default_thumbnail.jpg",
-      thumbnail2: "default_thumbnail.jpg",
-      thumbnail3: "default_thumbnail.jpg",
-      thumbnail4: "default_thumbnail.jpg",
-      thumbnail5: "default_thumbnail.jpg",
       user_id: 1 #仮のユーザーid
     )
     if @post.save
@@ -54,10 +50,30 @@ class PostsController < ApplicationController
     @post.article4 = params[:article4]
     @post.article5 = params[:article5]
     @post.tag = params[:tag]
-    if params[:image]
-      @post.thumbnail = "#{@post.id}.jpg"
-      image = params[:image]
-      File.binwrite("public/post_thumbnails/#{@post.thumbnail}", image.read)
+    if params[:image1]
+      @post.thumbnail1 = "#{@post.id}_1.jpg"
+      image1 = params[:image1]
+      File.binwrite("public/post_thumbnails/#{@post.thumbnail1}", image1.read)
+    end
+    if params[:image2]
+      @post.thumbnail2 = "#{@post.id}_2.jpg"
+      image2 = params[:image2]
+      File.binwrite("public/post_thumbnails/#{@post.thumbnail2}", image2.read)
+    end
+    if params[:image3]
+      @post.thumbnail3 = "#{@post.id}_3.jpg"
+      image3 = params[:image3]
+      File.binwrite("public/post_thumbnails/#{@post.thumbnail3}", image3.read)
+    end
+    if params[:image4]
+      @post.thumbnail4 = "#{@post.id}_4.jpg"
+      image4 = params[:image4]
+      File.binwrite("public/post_thumbnails/#{@post.thumbnail4}", image4.read)
+    end
+    if params[:image5]
+      @post.thumbnail5 = "#{@post.id}_5.jpg"
+      image5 = params[:image5]
+      File.binwrite("public/post_thumbnails/#{@post.thumbnail5}", image5.read)
     end
 
     if @post.save

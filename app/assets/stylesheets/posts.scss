@@ -1,4 +1,16 @@
 /* posts/index ================================ */
+.post-aside-thumbnail {
+  margin: 20px auto 0;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.post-aside-thumbnail:hover {
+  opacity: 0.6;
+}
+
 .posts-heading {
   margin: 60px 0 0 40px;
 }
@@ -6,6 +18,10 @@
 .post-aside-heading {
   text-align: center;
   margin-top: 40px;
+}
+
+.post-aside-title a:hover {
+  opacity: 0.6;
 }
 
 .post-time-aside {

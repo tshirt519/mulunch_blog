@@ -15,21 +15,48 @@
       <p class="posts-show-title">
         <%= @post.title %>
       </p>
-      <div class="posts-show-thumbnail">
-        <img src="<%= "/post_thumbnails/#{@post.thumbnail1}" %>">
-      </div>
       <p class="posts-show-content">
         <%= @post.content %>
       </p>
+      
+      <div class="posts-show-thumbnail">
+        <img src="<%= "/post_thumbnails/#{@post.thumbnail1}" %>">
+      </div>
       <div class="posts-show-article">
         <p class="post-article"><%= @post.article1 %></p>
+      </div>
+      <div class="posts-show-thumbnail">
+        <img src="<%= "/post_thumbnails/#{@post.thumbnail2}" %>">
+      </div>
+      <div class="posts-show-article">
         <p class="post-article"><%= @post.article2 %></p>
+      </div>
+      <div class="posts-show-thumbnail">
+        <img src="<%= "/post_thumbnails/#{@post.thumbnail3}" %>">
+      </div>
+      <div class="posts-show-article">
         <p class="post-article"><%= @post.article3 %></p>
+      </div>
+      <div class="posts-show-thumbnail">
+        <img src="<%= "/post_thumbnails/#{@post.thumbnail4}" %>">
+      </div>
+      <div class="posts-show-article">
         <p class="post-article"><%= @post.article4 %></p>
+      </div>
+      <div class="posts-show-thumbnail">
+        <img src="<%= "/post_thumbnails/#{@post.thumbnail5}" %>">
+      </div>
+      <div class="posts-show-article">
         <p class="post-article"><%= @post.article5 %></p>
       </div>
+
+
       <p class="post-tag">
-        <%= link_to("タグ：#{@post.tag}", "/posts/tag_#{@post.tag}") %>
+        <% if @post.tag == "" %>
+          <%= link_to("タグ：未設定", "/posts/#{@post.id}") %>
+        <% else %>
+          <%= link_to("タグ：#{@post.tag}", "/posts/tag_#{@post.tag}") %>
+        <% end %>
       </p>
       <div class="post-time">
         <%= @post.created_at %>
