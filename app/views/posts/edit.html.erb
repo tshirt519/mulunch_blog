@@ -9,19 +9,37 @@
               <%= message %>
             </div>
           <% end %>
+          <p>タイトル</p>
           <textarea name="title"><%= @post.title %></textarea>
+          <p>概要</p>
           <textarea name="content"><%= @post.content %></textarea>
-          <textarea name="article1"><%= @post.article1 %></textarea>
+          <p>画像1</p>
           <input name="image1" type="file">
-          <textarea name="article2"><%= @post.article2 %></textarea>
+          <p>記事1</p
+          <textarea name="article1"><%= @post.article1 %></textarea>
+          <p>画像2</p>
           <input name="image2" type="file">
-          <textarea name="article3"><%= @post.article3 %></textarea>
+          <p>記事2</p>
+          <textarea name="article2"><%= @post.article2 %></textarea>
+          <p>画像3</p>
           <input name="image3" type="file">
-          <textarea name="article4"><%= @post.article4 %></textarea>
+          <p>画像3</p>
+          <textarea name="article3"><%= @post.article3 %></textarea>
+          <p>画像4</p>
           <input name="image4" type="file">
-          <textarea name="article5"><%= @post.article5 %></textarea>
+          <p>記事4</p>
+          <textarea name="article4"><%= @post.article4 %></textarea>
+          <p>画像5</p>
           <input name="image5" type="file">
-          <textarea name="tag"><%= @post.tag %></textarea>
+          <p>記事5</p>
+          <textarea name="article5"><%= @post.article5 %></textarea>
+          <p>タグ</p>
+          <input type="text" name="tag" list="tag" placeholder="<%= @post.tag %>" autocomplete="off">
+          <datalist id="tag">
+            <option value="muramusubi">
+            <option value="villages">
+            <option value="PR">
+          </datalist>
           <input type="submit" value="保存">
         </div>
       </div>
