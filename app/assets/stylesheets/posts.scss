@@ -18,12 +18,12 @@
   opacity: 0.6;
 }
 
-.post-article {
-  padding: 20px 0;
+.post-content p {
+  padding: 40px 0;
 }
 
 .post-user-name {
-  padding-left: 20px;
+  margin-left: 20px;
 }
 
 .post-user-image:hover {
@@ -35,26 +35,35 @@
 }
 
 .post-main img {
+  text-align: center;
   width: 100%;
   height: auto;
   box-shadow: 0 2px 6px #c1ced7;
-  vertical-align: middle;
-  object-fit: cover;
-  margin: 20px 0;
+  margin: 20px auto;
 }
 
 .post-user-image {
   display: inline;
-  width: 60px;
-  height: 60px;
-  border-radius: 40%;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
   box-shadow: 0 2px 6px #c1ced7;
   vertical-align: middle;
   object-fit: cover;
 }
 
 .post-tag {
-  padding: 20px 0;
+  margin-top: 20px;
+}
+
+.post-tag a {
+  background: #de9044;
+  color: #fff;
+  border-radius: 50px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: normal;
+  box-shadow: 0 2px 6px #c1ced7;
 }
 
 .post-tag a:hover {
@@ -71,11 +80,13 @@
 }
 
 .posts-index-item {
-  margin: 20px 0;
-  padding: 20px 30px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px 60px;
   background-color: white;
   overflow: hidden;
   box-shadow: 0 2px 6px #c1ced7;
+  border-radius: 20px;
 }
 
 .post-user-name a {
@@ -85,7 +96,6 @@
 .post-user-name:hover {
   color: #000;
 }
-
 
 /* posts/show ================================ */
 .posts-show-title {
@@ -119,12 +129,12 @@
 }
 
 .posts-show-item p {
-  margin: 20px 0;
+  margin: 40px 0;
 }
 
 .post-time {
   color: #8899a6;
-  margin-bottom: 10px;
+  margin: 40px 0 20px;
 }
 
 .posts-show-item .fa {

@@ -35,14 +35,14 @@ form input[type="submit"] {
 }
 
 // /* 共通レイアウト ================================ */
-// body {
-//   color: #6e6d6e;
-//   margin: 0;
-//   min-height: 1vh;
-// }
+body {
+  color: #6e6d6e;
+  margin: 0 auto;
+  min-height: 1vh;
+}
 
 .main {
-  padding: 15% 5%;
+  padding: 10% 5% 5%;
   width: 100%;
   height: auto;
   min-height: 60vh;
@@ -51,6 +51,18 @@ form input[type="submit"] {
 
 .container {
   clear: both;
+}
+
+.footer-right {
+  padding-top: 40px;
+}
+
+.footer-login {
+  font-size: 12px;
+}
+
+div.footer-center {
+  padding-bottom: 0;
 }
 
 /* フォーム================================ */
