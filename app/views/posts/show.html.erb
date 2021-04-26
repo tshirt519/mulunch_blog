@@ -20,31 +20,41 @@
       </p>
       
       <div class="posts-show-thumbnail">
-        <img src="<%= "/post_thumbnails/#{@post.thumbnail1}" %>">
+        <% if @post.thumbnail1 != nil %>
+          <img src="<%= "/post_thumbnails/#{@post.thumbnail1}" %>">
+        <% end %>
       </div>
       <div class="posts-show-article">
-        <p class="post-article"><%= @post.article1 %></p>
+          <p class="post-article"><%= @post.article1 %></p>
       </div>
       <div class="posts-show-thumbnail">
-        <img src="<%= "/post_thumbnails/#{@post.thumbnail2}" %>">
+        <% if @post.thumbnail2 != nil %>
+          <img src="<%= "/post_thumbnails/#{@post.thumbnail2}" %>">
+        <% end %>
       </div>
       <div class="posts-show-article">
         <p class="post-article"><%= @post.article2 %></p>
       </div>
       <div class="posts-show-thumbnail">
-        <img src="<%= "/post_thumbnails/#{@post.thumbnail3}" %>">
+        <% if @post.thumbnail3 != nil %>
+          <img src="<%= "/post_thumbnails/#{@post.thumbnail3}" %>">
+        <% end %>
       </div>
       <div class="posts-show-article">
         <p class="post-article"><%= @post.article3 %></p>
       </div>
       <div class="posts-show-thumbnail">
-        <img src="<%= "/post_thumbnails/#{@post.thumbnail4}" %>">
+        <% if @post.thumbnail4 != nil %>
+          <img src="<%= "/post_thumbnails/#{@post.thumbnail4}" %>">
+        <% end %>
       </div>
       <div class="posts-show-article">
         <p class="post-article"><%= @post.article4 %></p>
       </div>
       <div class="posts-show-thumbnail">
-        <img src="<%= "/post_thumbnails/#{@post.thumbnail5}" %>">
+        <% if @post.thumbnail5 != nil %>
+          <img src="<%= "/post_thumbnails/#{@post.thumbnail5}" %>">
+        <% end %>
       </div>
       <div class="posts-show-article">
         <p class="post-article"><%= @post.article5 %></p>
