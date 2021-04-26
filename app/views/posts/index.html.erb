@@ -37,11 +37,11 @@
     <h3 class="post-aside-heading">過去の投稿</h3>
     <% @old_posts.each do |old_post| %>
       <div class="posts-index-aside">
-        <div class="post-main">
+        <div class="post-aside-main">
           <div class="post-aside-title">
             <%= link_to(old_post.title, "/posts/#{old_post.id}") %>
           </div>
-          <%= link_to image_tag("/post_thumbnails/#{old_post.thumbnail1}", class:"post-index-thumbnail"), "/posts/#{old_post.id}" %>
+          <%= link_to image_tag("/post_thumbnails/#{old_post.thumbnail1}", class:"post-aside-thumbnail"), "/posts/#{old_post.id}" %>
           <div class="post-tag post-aside-tag">
             <% if old_post.tag == "" %>
               <%= link_to("タグ：未設定", "/posts/#{old_post.id}") %>
