@@ -1,25 +1,52 @@
-<div class="main posts-index">
-  <div class="container">
-    <% @posts.each do |post| %>
-      <div class="posts-index-item">
-        <div class="post-user">
-          <%= link_to image_tag("/user_images/#{post.user.image_name}", class:"post-user-image"), "/users/#{post.user.id}" %>
-          <%= link_to("#{post.user.name}", "/users/#{post.user.id}", class: "post-user-name") %>
-        </div>
 
-        <div class="post-main">
-          <div class="post-title">
-            <%= link_to(post.title, "/posts/#{post.id}") %>
-          </div>
-          <%= link_to image_tag("/post_thumbnails/#{post.thumbnail1}", class:"post-index-thumbnail"), "/posts/#{post.id}" %>
-          <div class="post-content">
-            <%= link_to(post.content, "/posts/#{post.id}") %>
-            <div class="post-tag">
-                <%= link_to("タグ：#{post.tag}", "/posts/tag_#{post.tag}") %>
+<div class="posts-index-flex">
+  <main>
+    <div class="main posts-index">
+      <div class="container">
+        <h1 class="posts-heading">投稿一覧</h1>
+        <% @posts.each do |post| %>
+          <div class="posts-index-item">
+            <div class="post-user">
+              <%= link_to image_tag("/user_images/#{post.user.image_name}", class:"post-user-image"), "/users/#{post.user.id}" %>
+              <%= link_to("#{post.user.name}", "/users/#{post.user.id}", class: "post-user-name") %>
             </div>
+
+            <div class="post-main">
+              <div class="post-title">
+                <%= link_to(post.title, "/posts/#{post.id}") %>
+              </div>
+              <%= link_to image_tag("/post_thumbnails/#{post.thumbnail1}", class:"post-index-thumbnail"), "/posts/#{post.id}" %>
+              <div class="post-content">
+                <%= link_to(post.content, "/posts/#{post.id}") %>
+                <div class="post-tag">
+                    <%= link_to("タグ：#{post.tag}", "/posts/tag_#{post.tag}") %>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </main>
+
+  <aside>
+    <h3 class="post-aside-heading">過去の投稿</h3>
+    <% @old_posts.each do |old_post| %>
+      <div class="posts-index-aside">
+        <div class="post-main">
+          <div class="post-aside-title">
+            <%= link_to(old_post.title, "/posts/#{old_post.id}") %>
+          </div>
+          <%= link_to image_tag("/post_thumbnails/#{old_post.thumbnail1}", class:"post-index-thumbnail"), "/posts/#{old_post.id}" %>
+          <div class="post-tag post-aside-tag">
+              <%= link_to("タグ：#{old_post.tag}", "/posts/tag_#{old_post.tag}") %>
+          </div>
+          <div class="post-time-aside">
+            <%= old_post.created_at %>
           </div>
         </div>
       </div>
     <% end %>
-  </div>
+  </aside>
+
 </div>

@@ -1,6 +1,41 @@
 /* posts/index ================================ */
+.posts-heading {
+  margin: 60px 0 0 40px;
+}
+
+.post-aside-heading {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.post-time-aside {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.posts-index-flex {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  flex: 3;
+}
+
+aside {
+  flex: 1;
+  padding: 15% 2.5% 5% 0;
+  height: auto;
+  min-height: 30vh;
+  background-color: #f5f8fa;
+}
+
 .post-title {
   margin: 20px 0 0;
+}
+
+.post-aside-title {
+  margin: 0;
 }
 
 .post-content a:hover {
@@ -66,6 +101,14 @@
   box-shadow: 0 2px 6px #c1ced7;
 }
 
+.post-aside-tag {
+  text-align: center;
+}
+
+.post-aside-tag a {
+  font-size: 10px;
+}
+
 .post-tag a:hover {
   opacity: 0.6;
 }
@@ -73,6 +116,11 @@
 .post-title a {
   font-weight: bold;
   font-size: 20px;
+}
+
+.post-aside-title a {
+  font-weight: bold;
+  font-size: 12px;
 }
 
 .post-title a:hover {
@@ -87,6 +135,17 @@
   overflow: hidden;
   box-shadow: 0 2px 6px #c1ced7;
   border-radius: 20px;
+}
+
+.posts-index-aside {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 2px 6px #c1ced7;
+  border-radius: 20px;
+  font-size: 10px;
 }
 
 .post-user-name a {
