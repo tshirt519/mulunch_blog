@@ -42,15 +42,16 @@ body {
 }
 
 .main {
-  padding: 10% 5% 5%;
+  padding: 10% 2.5% 5%;
   width: 100%;
   height: auto;
   min-height: 60vh;
   background-color: #f5f8fa;
 }
 
-.container {
+div.container {
   clear: both;
+  padding: 0;
 }
 
 .footer-right {

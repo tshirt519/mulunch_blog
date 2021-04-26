@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   
   def index
     @posts = Post.all.order(created_at: :desc)
+    @old_posts = Post.all
   end
   
   def show
