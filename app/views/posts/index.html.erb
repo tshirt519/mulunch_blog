@@ -19,7 +19,11 @@
               <div class="post-content">
                 <%= link_to(post.content, "/posts/#{post.id}") %>
                 <div class="post-tag">
+                  <% if post.tag == "" %>
+                    <%= link_to("タグ：未設定", "/posts/#{post.id}") %>
+                  <% else %>
                     <%= link_to("タグ：#{post.tag}", "/posts/tag_#{post.tag}") %>
+                  <% end %>
                 </div>
               </div>
             </div>
@@ -39,7 +43,11 @@
           </div>
           <%= link_to image_tag("/post_thumbnails/#{old_post.thumbnail1}", class:"post-index-thumbnail"), "/posts/#{old_post.id}" %>
           <div class="post-tag post-aside-tag">
+            <% if old_post.tag == "" %>
+              <%= link_to("タグ：未設定", "/posts/#{old_post.id}") %>
+            <% else %>
               <%= link_to("タグ：#{old_post.tag}", "/posts/tag_#{old_post.tag}") %>
+            <% end %>
           </div>
           <div class="post-time-aside">
             <%= old_post.created_at %>
@@ -48,5 +56,4 @@
       </div>
     <% end %>
   </aside>
-
 </div>

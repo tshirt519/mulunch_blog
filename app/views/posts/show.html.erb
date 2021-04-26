@@ -52,7 +52,11 @@
 
 
       <p class="post-tag">
-        <%= link_to("タグ：#{@post.tag}", "/posts/tag_#{@post.tag}") %>
+        <% if @post.tag == "" %>
+          <%= link_to("タグ：未設定", "/posts/#{@post.id}") %>
+        <% else %>
+          <%= link_to("タグ：#{@post.tag}", "/posts/tag_#{@post.tag}") %>
+        <% end %>
       </p>
       <div class="post-time">
         <%= @post.created_at %>
