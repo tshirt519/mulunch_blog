@@ -86,8 +86,23 @@ div.footer-center {
 }
 
 .form-error {
-  color: #ff4d75;
+  background-color: #ff4d75;
+  padding: 10px 0;
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  z-index: 10;
+  width: 100%;
+  font-size: 14px;
+  cursor: pointer;
 }
+
+.form-error:hover {
+  display: none;
+}
+
 
 .form input {
   width: 100%;
@@ -129,10 +144,15 @@ div.footer-center {
   color: white;
   background: #de9044;
   text-align: center;
-  position: absolute;
-  top: 64px;
+  position: fixed;
+  bottom: 0px;
   z-index: 10;
   width: 100%;
   border-radius: 0 0 2px 2px;
   font-size: 14px;
+  cursor: pointer;
+}
+
+.flash:hover {
+  display: none;
 }
