@@ -1,4 +1,26 @@
 /* posts/index ================================ */
+.tag-navigation {
+  margin: 80px 0 0 40px;
+}
+
+.tag-navigation-flex {
+  display: flex;
+}
+
+.tag-navigation-flex li a {
+  margin: 0 20px;
+  padding: 20px 30px;
+  border-radius: 50px;
+  background: #fff;
+  box-shadow: 0 2px 6px #c1ced7;
+  display: block;
+  font-size: 12px;
+}
+
+.tag-navigation-flex li:hover {
+  filter: brightness(120%)
+}
+
 .post-aside-thumbnail {
   margin: 20px auto 0;
   text-align: center;
