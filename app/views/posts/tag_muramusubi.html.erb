@@ -1,5 +1,13 @@
 <div class="main posts-index">
   <div class="container">
+    <div class="tag-navigation">
+      <ul class="tag-navigation-flex">
+        <li><%= link_to("投稿一覧へ", "/posts/index") %></li>
+        <li><%= link_to("むらむすび", "/posts/tag_muramusubi") %></li>
+        <li><%= link_to("全国の村について", "/posts/tag_villages") %></li>
+      </ul>
+    </div>
+    <h1 class="posts-heading">むらむすび</h1>
     <% @posts.each do |post| %>
       <div class="posts-index-item">
         <div class="post-user">
