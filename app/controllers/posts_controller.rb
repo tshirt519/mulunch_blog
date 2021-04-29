@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   
   def index
     @posts = Post.all.order(created_at: :desc)
-    @old_posts = Post.all(created_at: :asc)
+    @old_posts = Post.all.order(created_at: :asc)
   end
   
   def show
