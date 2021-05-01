@@ -55,7 +55,7 @@ div.container {
 }
 
 footer {
-  padding: 40px 0 20px;
+  padding: 40px 0;
 }
 
 .footer-right {
@@ -162,7 +162,13 @@ div.footer-center {
 }
 
 /* home#top ================================ */
+
 .top-join-input {
   background: #fff;
   border: 1px solid #6e6d6e;
+}
+
+.fa-chevron-circle-down:before {
+  font-size: 20px;
+  line-height: 25px;
 }
