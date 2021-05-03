@@ -56,6 +56,8 @@ div.container {
 
 footer {
   padding: 40px 0;
+  box-shadow: 2px 0 6px #c1ced7;
+  position: relative;
 }
 
 .footer-right {
@@ -72,6 +74,7 @@ div.footer-center {
 
 a.sns-btn {
   font-size: 20px;
+  box-shadow: 0px 4px 2px #c1ced7;
 }
 
 .fa-instagram:before {
