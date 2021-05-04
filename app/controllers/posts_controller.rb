@@ -127,10 +127,12 @@ class PostsController < ApplicationController
 
   def tag_muramusubi
     @posts = Post.where(tag: "muramusubi").order(created_at: :desc)
+    @old_posts = Post.all.order(created_at: :asc)
   end
 
   def tag_villages
     @posts = Post.where(tag: "villages").order(created_at: :desc)
+    @old_posts = Post.all.order(created_at: :asc)
   end
 
 end
