@@ -6,24 +6,16 @@ class ApplicationController < ActionController::Base
     @current_user = User.find_by(id: session[:user_id])
   end
   
-  # def authenticate_user
-  #   if @current_user == nil
-  #     flash[:notice] = "ログインが必要です"
-  #     redirect_to("/login")
-  #   end
-  # end
-  
-  # def forbid_login_user
-  #   if @current_user
-  #     flash[:notice] = "すでにログインしています"
-  #     redirect_to("/posts/index")
-  #   end
-  # end
+  def forbid_guest_user
+    if @current_user == nil
+      flash[:notice] = "権限がありません"
+      redirect_to("/posts/index")
+    end
+  end
 
   def set_guest_user
     if @current_user == nil
       @guest_user = User.find_by(name: "guest_mulunch")
-        flash[:notice] = "ゲストユーザーとしてログインしました"
     end
   end
 
