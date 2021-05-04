@@ -80,13 +80,6 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
     @likes = Like.where(user_id: @user.id)
   end
-  
-  # def ensure_correct_user
-  #   if @current_user.id != params[:id].to_i
-  #     flash[:notice] = "権限がありません"
-  #     redirect_to("/posts/index")
-  #   end
-  # end
 
   def destroy
     @user = User.find_by(id: params[:id])
