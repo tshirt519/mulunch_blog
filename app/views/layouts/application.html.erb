@@ -94,6 +94,7 @@
             <% if @current_user %>
               <%= link_to("ユーザー名：#{@current_user.name}", "/users/#{@current_user.id}") %>
               <%= link_to("ログアウト", "/logout", method: :post) %>
+              <%= link_to("新規投稿", "/posts/new") %>
             <% else %>
             <% end %>
 
