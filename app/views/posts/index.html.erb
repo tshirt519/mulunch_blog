@@ -3,7 +3,7 @@
   <main>
     <div class="main posts-index">
       <div class="container">
-          <ul class="user-tabs">
+          <ul class="post-tabs">
             <li class="active"><%= link_to("投稿一覧", "/posts/index") %></li>
             <li><%= link_to("むらむすび", "/posts/tag_muramusubi") %></li>
             <li><%= link_to("村について", "/posts/tag_villages") %></li>
@@ -25,14 +25,28 @@
               <% end %>
               <div class="post-content">
                 <%= link_to(post.content, "/posts/#{post.id}") %>
-                <div class="post-tag">
-                  <% if post.tag == "" %>
-                    <%= link_to("タグ：未設定", "/posts/#{post.id}") %>
-                  <% else %>
-                    <%= link_to("タグ：#{post.tag}", "/posts/tag_#{post.tag}") %>
-                  <% end %>
-                </div>
               </div>
+              <div class="post-tag">
+                <% if post.tag == nil %>
+                  <%= link_to("タグ：未設定", "/posts/#{post.id}") %>
+                <% else %>
+                  <%= link_to("タグ：#{post.tag}", "/posts/tag_#{post.tag}") %>
+                <% end %>
+              </div>
+              <div class="post-time">
+                <%= post.created_at %>
+              </div>
+              <% if Like.find_by(user_id: @current_user.id, post_id: post.id) %>
+                <%= link_to("/likes/#{post.id}/destroy", {method: "post"}) do %>
+                  <span class="fa fa-heart like-btn-unlike"></span>
+                <% end %>
+              <% else %>
+                <%= link_to("/likes/#{post.id}/create", {method: "post"}) do %>
+                  <span class="fa fa-heart like-btn"></span>
+                <% end %>
+              <% end %>
+              <% @likes_count = Like.where(post_id: post.id).count %>
+              <%= @likes_count %>
             </div>
           </div>
         <% end %>
@@ -50,7 +64,7 @@
           </div>
           <%= link_to image_tag("/post_thumbnails/#{old_post.thumbnail1}", class:"post-aside-thumbnail"), "/posts/#{old_post.id}" %>
           <div class="post-tag post-aside-tag">
-            <% if old_post.tag == "" %>
+            <% if old_post.tag == nil %>
               <%= link_to("タグ：未設定", "/posts/#{old_post.id}") %>
             <% else %>
               <%= link_to("タグ：#{old_post.tag}", "/posts/tag_#{old_post.tag}") %>
@@ -59,6 +73,18 @@
           <div class="post-time-aside">
             <%= old_post.created_at %>
           </div>
+
+          <% if Like.find_by(user_id: @current_user.id, post_id: old_post.id) %>
+            <%= link_to("/likes/#{old_post.id}/destroy", {method: "post"}) do %>
+              <span class="fa fa-heart like-btn-unlike"></span>
+            <% end %>
+          <% else %>
+            <%= link_to("/likes/#{old_post.id}/create", {method: "post"}) do %>
+              <span class="fa fa-heart like-btn"></span>
+            <% end %>
+          <% end %>
+          <% @likes_count = Like.where(post_id: old_post.id).count %>
+          <%= @likes_count %>
         </div>
       </div>
     <% end %>

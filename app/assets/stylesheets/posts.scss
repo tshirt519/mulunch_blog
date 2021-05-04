@@ -1,13 +1,10 @@
 /* posts/index ================================ */
-.tag-navigation {
+.post-tabs {
   margin: 80px 0 0 40px;
-}
-
-.tag-navigation-flex {
   display: flex;
 }
 
-.tag-navigation-flex li a {
+.post-tabs li a {
   margin: 0 20px;
   padding: 20px 30px;
   border-radius: 50px;
@@ -17,8 +14,22 @@
   font-size: 12px;
 }
 
-.tag-navigation-flex li:hover {
-  filter: brightness(120%)
+.post-tabs li.active a {
+  background-color: #de9044;
+}
+
+.post-tabs li.active a {
+  color: #fff;
+}
+
+.post-tabs a {
+  display: inline-block;
+  padding: 16px 30px;
+  color: #afb6bf;
+}
+
+.post-tabs li:hover {
+  filter: brightness(110%)
 }
 
 .post-aside-thumbnail {
