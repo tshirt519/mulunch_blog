@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :forbid_guest_user, {only: [:new, :create, :edit, :update, :login_form, :login, :logout, :destroy]}
+  before_action :forbid_guest_user, {only: [:new, :create, :edit, :update, :logout, :destroy, :signup]}
 
   def index
     @users = User.all
@@ -74,6 +74,11 @@ class UsersController < ApplicationController
     session[:user_id] = nil
     flash[:notice] = "ログアウトしました"
     redirect_to("/posts/index")
+  end
+
+  def likes
+    @user = User.find_by(id: params[:id])
+    @likes = Like.where(user_id: @user.id)
   end
   
   # def ensure_correct_user

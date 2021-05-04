@@ -8,6 +8,8 @@ class PostsController < ApplicationController
   
   def show
     @post = Post.find_by(id: params[:id])
+    @user = User.find_by(id: @post.user_id)
+    @likes_count = Like.where(post_id: @post.id).count
   end
   
   def new
@@ -24,7 +26,7 @@ class PostsController < ApplicationController
       article4: params[:article4],
       article5: params[:article5],
       tag: params[:tag],
-      user_id: 1 #仮のユーザーid
+      user_id: @current_user.id #adminのユーザーid
     )
     if params[:image1]
       @post.thumbnail1 = "#{@post.id}_1.jpg"
