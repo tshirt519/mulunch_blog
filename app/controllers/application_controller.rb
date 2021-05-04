@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   end
   
   def forbid_guest_user
-    if @current_user == nil
+    if @current_user != User.find_by(name: "admin_mulunch")
       flash[:alert] = "権限がありません"
       redirect_to("/posts/index")
     end
@@ -15,8 +15,7 @@ class ApplicationController < ActionController::Base
 
   def set_guest_user
     if @current_user == nil
-      @guest_user = User.find_by(name: "guest_mulunch")
-      @current_user = @guest_user
+      @current_user = User.find_by(name: "guest_mulunch")
     end
   end
 
