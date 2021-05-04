@@ -116,14 +116,6 @@ class PostsController < ApplicationController
     flash[:notice] = "投稿を削除しました"
     redirect_to("/posts/index")
   end
-  
-  # def ensure_correct_user
-  #   @post = Post.find_by(id: params[:id])
-  #   if @post.user_id != @current_user.id
-  #     flash[:notice] = "権限がありません"
-  #     redirect_to("/posts/index")
-  #   end
-  # end
 
   def tag_muramusubi
     @posts = Post.where(tag: "muramusubi").order(created_at: :desc)
