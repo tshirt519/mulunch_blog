@@ -91,16 +91,13 @@
           <p>11:30-14:30 (LO 14:00) 土日祝日 営業</p>
           <small>©︎ Muramusubi</small>
           <div class="footer-login">
-            <% if @current_user %>
+            <% if @current_user != User.find_by(name: "guest_mulunch") %>
               <%= link_to("ユーザー名：#{@current_user.name}", "/users/#{@current_user.id}") %>
               <%= link_to("ログアウト", "/logout", method: :post) %>
               <%= link_to("新規投稿", "/posts/new") %>
             <% else %>
-            <% end %>
-
-            <% if @guest_user %>
-              <%= link_to("ユーザー名：#{@guest_user.name}", "/users/#{@guest_user.id}") %>
-              <%= link_to("アカウント変更", "/login",) %>
+              <%= link_to("ユーザー名：#{@current_user.name}", "/users/#{@current_user.id}") %>
+              <%= link_to("管理者ログイン", "/login",) %>
             <% end %>
           </div>
         </div>

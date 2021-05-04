@@ -4,8 +4,9 @@
       <img src="<%= "/user_images/#{@user.image_name}" %>">
       <h2><%= @user.name %></h2>
       <p><%= @user.email %></p>
-      <% if @current_user %>
+      <% if @current_user == User.find_by(name: "admin_mulunch") %>
         <%= link_to("編集", "/users/#{@user.id}/edit") %>
+        <%= link_to("削除", "/users/#{@user.id}/destroy") %>
       <% end %>
     </div>
     
