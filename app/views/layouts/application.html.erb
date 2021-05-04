@@ -85,8 +85,16 @@
           <p>11:30-14:30 (LO 14:00) 土日祝日 営業</p>
           <small>©︎ Muramusubi</small>
           <div class="footer-login">
-            <a href="/login">管理者ログイン<a>
-            <a href="/logout">ログアウト<a>
+            <% if @current_user %>
+              <%= link_to("ユーザー名：#{@current_user.name}", "/users/#{@current_user.id}") %>
+              <%= link_to("ログアウト", "/logout", method: :post) %>
+            <% else %>
+            <% end %>
+
+            <% if @guest_user %>
+              <%= link_to("ユーザー名：#{@guest_user.name}", "/users/#{@guest_user.id}") %>
+              <%= link_to("アカウント変更", "/login",) %>
+            <% end %>
           </div>
         </div>
       </div>
