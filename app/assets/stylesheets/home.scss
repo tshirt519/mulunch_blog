@@ -167,12 +167,28 @@ a.sns-btn {
   bottom: 0px;
   z-index: 10;
   width: 100%;
-  border-radius: 0 0 2px 2px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.flash-alert {
+  padding: 10px 0;
+  color: white;
+  background: #ff4d75;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+  z-index: 10;
+  width: 100%;
   font-size: 14px;
   cursor: pointer;
 }
 
 .flash:hover {
+  display: none;
+}
+
+.flash-alert:hover {
   display: none;
 }
 

@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   
   def forbid_guest_user
     if @current_user == nil
-      flash[:notice] = "権限がありません"
+      flash[:alert] = "権限がありません"
       redirect_to("/posts/index")
     end
   end
