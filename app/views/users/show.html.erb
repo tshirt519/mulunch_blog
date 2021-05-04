@@ -4,8 +4,10 @@
       <img src="<%= "/user_images/#{@user.image_name}" %>">
       <h2><%= @user.name %></h2>
       <p><%= @user.email %></p>
+      <% if @current_user %>
         <%= link_to("編集", "/users/#{@user.id}/edit") %>
         <%= link_to("削除", "/users/#{@user.id}/destroy", {method: "post"}) %>
+      <% end %>
     </div>
     
     <ul class="user-tabs">
