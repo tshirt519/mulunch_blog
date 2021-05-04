@@ -16,6 +16,7 @@ class ApplicationController < ActionController::Base
   def set_guest_user
     if @current_user == nil
       @guest_user = User.find_by(name: "guest_mulunch")
+      @current_user = @guest_user
     end
   end
 
