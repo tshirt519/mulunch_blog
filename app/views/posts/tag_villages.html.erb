@@ -7,8 +7,11 @@
           <li><%= link_to("投稿一覧", "/posts/index") %></li>
           <li><%= link_to("むらむすび", "/posts/tag_muramusubi") %></li>
           <li class="active"><%= link_to("村について", "/posts/tag_villages") %></li>
+          <li><%= link_to("上野村", "/posts/tag_ueno") %></li>
+          <li><%= link_to("大鹿村", "/posts/tag_oshika") %></li>
+          <li><%= link_to("東成瀬村", "/posts/tag_higashi_naruse") %></li>
         </ul>
-      <h1 class="posts-heading">投稿一覧</h1>
+      <h1 class="posts-heading">全国の村について</h1>
       <% @posts.each do |post| %>
         <div class="posts-index-item">
           <div class="post-user">
@@ -27,12 +30,20 @@
               <%= link_to(post.content, "/posts/#{post.id}") %>
             </div>
             <div class="post-tag">
-              <% if post.tag == nil %>
+              <% if post.tag == "" %>
                 <%= link_to("タグ：未設定", "/posts/#{post.id}") %>
               <% else %>
                 <%= link_to("タグ：#{post.tag}", "/posts/tag_#{post.tag}") %>
               <% end %>
             </div>
+            <div class="village-tag post-tag">
+              <% if post.village_tag == "" %>
+                <%= link_to("村：未設定", "/posts/#{post.id}") %>
+              <% else %>
+                <%= link_to("村：#{post.village_tag}", "/posts/tag_#{post.village_tag}") %>
+              <% end %>
+            </div>
+
             <div class="post-time">
               <%= post.created_at %>
             </div>
@@ -64,12 +75,21 @@
         </div>
         <%= link_to image_tag("/post_thumbnails/#{old_post.thumbnail1}", class:"post-aside-thumbnail"), "/posts/#{old_post.id}" %>
         <div class="post-tag post-aside-tag">
-          <% if old_post.tag == nil %>
+          <% if old_post.tag == "" %>
             <%= link_to("タグ：未設定", "/posts/#{old_post.id}") %>
           <% else %>
             <%= link_to("タグ：#{old_post.tag}", "/posts/tag_#{old_post.tag}") %>
           <% end %>
         </div>
+
+        <div class="village-tag post-tag post-aside-tag">
+          <% if old_post.village_tag == "" %>
+            <%= link_to("村：未設定", "/posts/#{old_post.id}") %>
+          <% else %>
+            <%= link_to("村：#{old_post.village_tag}", "/posts/tag_#{old_post.village_tag}") %>
+          <% end %>
+        </div>
+
         <div class="post-time-aside">
           <%= old_post.created_at %>
         </div>
