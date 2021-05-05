@@ -10,6 +10,7 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: params[:id])
     @user = User.find_by(id: @post.user_id)
     @likes_count = Like.where(post_id: @post.id).count
+    @old_posts = Post.all.order(created_at: :asc)
   end
   
   def new
@@ -26,6 +27,7 @@ class PostsController < ApplicationController
       article4: params[:article4],
       article5: params[:article5],
       tag: params[:tag],
+      village_tag: params[:village_tag],
       user_id: @current_user.id #adminのユーザーid
     )
     if params[:image1]
@@ -76,6 +78,7 @@ class PostsController < ApplicationController
     @post.article4 = params[:article4]
     @post.article5 = params[:article5]
     @post.tag = params[:tag]
+    @post.village_tag = params[:village_tag]
     if params[:image1]
       @post.thumbnail1 = "#{@post.id}_1.jpg"
       image1 = params[:image1]
@@ -124,6 +127,21 @@ class PostsController < ApplicationController
 
   def tag_villages
     @posts = Post.where(tag: "villages").order(created_at: :desc)
+    @old_posts = Post.all.order(created_at: :asc)
+  end
+
+  def tag_ueno
+    @posts = Post.where(village_tag: "ueno").order(created_at: :desc)
+    @old_posts = Post.all.order(created_at: :asc)
+  end
+
+  def tag_oshika
+    @posts = Post.where(village_tag: "oshika").order(created_at: :desc)
+    @old_posts = Post.all.order(created_at: :asc)
+  end
+
+  def tag_higashi_naruse
+    @posts = Post.where(village_tag: "higashi_naruse").order(created_at: :desc)
     @old_posts = Post.all.order(created_at: :asc)
   end
 

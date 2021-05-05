@@ -18,6 +18,10 @@ Rails.application.routes.draw do
 
   get "posts/tag_muramusubi" => "posts#tag_muramusubi"
   get "posts/tag_villages" => "posts#tag_villages"
+  get "posts/tag_ueno" => "posts#tag_ueno"
+  get "posts/tag_oshika" => "posts#tag_oshika"
+  get "posts/tag_higashi_naruse" => "posts#tag_higashi_naruse"
+
   get "posts/index" => "posts#index"
   get "posts/new" => "posts#new"
   get "posts/:id" => "posts#show"
