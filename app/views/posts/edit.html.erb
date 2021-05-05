@@ -34,13 +34,13 @@
           <p>記事5</p>
           <textarea name="article5"><%= @post.article5 %></textarea>
           <p>記事タグ</p>
-          <input type="text" name="tag" list="tag" placeholder="<%= @post.tag %>" autocomplete="off">
+          <input type="text" name="tag" list="tag" value="<%= @post.tag %>" autocomplete="off">
           <datalist id="tag">
             <option value="muramusubi">
             <option value="villages">
           </datalist>
           <p>村タグ</p>
-          <input type="text" name="village_tag" list="village_tag" placeholder="<%= @post.village_tag %>" autocomplete="off">
+          <input type="text" name="village_tag" list="village_tag" value="<%= @post.village_tag %>" autocomplete="off">
           <datalist id="village_tag">
             <option value="ueno">
             <option value="oshika">
