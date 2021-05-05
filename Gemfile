@@ -64,3 +64,6 @@ end
 
 #AWS S3用に追加
 gem 'aws-sdk', '~> 2'
+
+#エラーメッセージ日本語化
+gem 'rails-i18n'
