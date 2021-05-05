@@ -18,7 +18,7 @@ class UsersController < ApplicationController
       name: params[:name],
       email: params[:email],
       image_name: "default_user.jpg",
-      password_digest: params[:password]
+      password: params[:password]
     )
     if @user.save
       session[:user_id] = @user.id
@@ -59,7 +59,7 @@ class UsersController < ApplicationController
     session[:user_id] = nil
     @user = User.find_by(email: params[:email])
     
-    if @user
+    if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
       flash[:notice] = "ログインしました"
       redirect_to("/posts/index")
