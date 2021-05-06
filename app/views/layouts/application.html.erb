@@ -16,7 +16,7 @@
     <script src="https://kit.fontawesome.com/e7ff59a212.js" crossorigin="anonymous"></script>
   </head>
 
-  <body>
+  <body id="js-body">
     <header>
       <nav class="container header-flex">
           <a href="/" class="header-logo">
@@ -83,6 +83,9 @@
           <a href="https://twitter.com/muramusubi/" class="sns-btn"><i class="fa fa-twitter"></i></a>
           <a href="https://www.instagram.com/muramusubi/" class="sns-btn"><i class="fa fa-instagram"></i></a>
           <a href="https://www.facebook.com/muramusubi/" class="sns-btn"><i class="fa fa-facebook"></i></a>
+
+          <p id="test">モーダルを作成</p>
+
         </div>
         <div class="footer-right">
           <h3><span class="mulunch-font">むらんち</span></h3>
@@ -105,5 +108,26 @@
     </footer>
 
     <script src="https://tshirt519.github.io/mulunch/js/menu.js"></script>
+
+    <script language="javascript">
+        let test = document.getElementById('test');
+        let body = document.getElementById('js-body');
+        let modal = document.createElement('div');
+
+        function createModal() {
+          body.appendChild(modal);
+          modal.classList.add('modal');
+          console.log('モーダルを作成しました');
+        }
+
+        function deleteModal() {
+          modal.classList.remove('modal');
+          console.log('モーダルを削除しました');
+        }
+
+        test.addEventListener('click', createModal);
+        modal.addEventListener('click', deleteModal);
+          
+    </script>
   </body>
 </html>
