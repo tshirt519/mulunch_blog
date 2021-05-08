@@ -2,6 +2,7 @@
 
 .post-user-follow {
   display: flex;
+  width: 100%;
 }
 
 .post-user {
@@ -307,13 +308,19 @@ aside {
 }
 
 .post-menus {
-  float: right;
+  display: flex;
+  flex: 2;
+  width: 100px;
+  margin-left: 20px;
 }
 
 .post-menus a, .post-menus input {
   color: #8899a6;
   text-decoration: none;
   font-size: 14px;
+  display: block;
+  margin: 0 10px;
+  width: 50px;
 }
 
 .post-menus a:hover {
