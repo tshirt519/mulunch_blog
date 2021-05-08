@@ -14,9 +14,15 @@
       <h1 class="posts-heading">全国の村について</h1>
       <% @posts.each do |post| %>
         <div class="posts-index-item">
-          <div class="post-user">
-            <%= link_to image_tag("/user_images/#{post.user.image_name}", class:"post-user-image"), "/users/#{post.user.id}" %>
-            <%= link_to("#{post.user.name}", "/users/#{post.user.id}", class: "post-user-name") %>
+          <div class="post-user-share">
+            <div class="post-user">
+              <%= link_to image_tag("/user_images/#{post.user.image_name}", class:"post-user-image"), "/users/#{post.user.id}" %>
+              <%= link_to("#{post.user.name}", "/users/#{post.user.id}", class: "post-user-name") %>
+              <small><%= "#{time_ago_in_words(post.created_at)}前" %></small>
+            </div>
+            <div class="post-share">
+              <a class="share-button" id="js-modalButton">シェアする</a>
+            </div>
           </div>
 
           <div class="post-main">
@@ -29,24 +35,23 @@
             <div class="post-content">
               <%= link_to(post.content, "/posts/#{post.id}") %>
             </div>
-            <div class="post-tag">
-              <% if post.tag == "" %>
-                <%= link_to("タグ：未設定", "/posts/#{post.id}") %>
-              <% else %>
-                <%= link_to("タグ：#{post.tag}", "/posts/tag_#{post.tag}") %>
-              <% end %>
-            </div>
-            <div class="village-tag post-tag">
-              <% if post.village_tag == "" %>
-                <%= link_to("村：未設定", "/posts/#{post.id}") %>
-              <% else %>
-                <%= link_to("村：#{post.village_tag}", "/posts/tag_#{post.village_tag}") %>
-              <% end %>
+            <div class="post-tags-flex">
+              <div class="post-tag">
+                <% if post.tag == "" %>
+                  <%= link_to("タグ：未設定", "/posts/#{post.id}") %>
+                <% else %>
+                  <%= link_to("タグ：#{post.tag}", "/posts/tag_#{post.tag}") %>
+                <% end %>
+              </div>
+              <div class="village-tag post-tag">
+                <% if post.village_tag == "" %>
+                  <%= link_to("村：未設定", "/posts/#{post.id}") %>
+                <% else %>
+                  <%= link_to("村：#{post.village_tag}", "/posts/tag_#{post.village_tag}") %>
+                <% end %>
+              </div>
             </div>
 
-            <div class="post-time">
-              <%= post.created_at %>
-            </div>
             <% if Like.find_by(user_id: @current_user.id, post_id: post.id) %>
               <%= link_to("/likes/#{post.id}/destroy", {method: "post"}) do %>
                 <span class="fa fa-heart like-btn-unlike"></span>
@@ -91,7 +96,8 @@
         </div>
 
         <div class="post-time-aside">
-          <%= old_post.created_at %>
+          <%= link_to("#{old_post.user.name}", "/users/#{old_post.user.id}", class: "post-user-name") %>
+          <small><%= "#{time_ago_in_words(old_post.created_at)}前" %></small>
         </div>
 
         <% if Like.find_by(user_id: @current_user.id, post_id: old_post.id) %>
