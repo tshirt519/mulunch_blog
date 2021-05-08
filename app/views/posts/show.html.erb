@@ -78,22 +78,23 @@
         <p class="post-article"><%= @post.article5 %></p>
       </div>
 
+      <div class="post-tags-flex">
+        <div class="post-tag">
+          <% if @post.tag == "" %>
+            <%= link_to("タグ：未設定", "/posts/#{@post.id}") %>
+          <% else %>
+            <%= link_to("タグ：#{@post.tag}", "/posts/tag_#{@post.tag}") %>
+          <% end %>
+        </div>
+        <div class="village-tag post-tag">
+          <% if @post.village_tag == "" %>
+            <%= link_to("村：未設定", "/posts/#{@post.id}") %>
+          <% else %>
+            <%= link_to("村：#{@post.village_tag}", "/posts/tag_#{@post.village_tag}") %>
+          <% end %>
+        </div>
+      </div>
 
-      <p class="post-tag">
-        <% if @post.tag == "" %>
-          <%= link_to("タグ：未設定", "/posts/#{@post.id}") %>
-        <% else %>
-          <%= link_to("タグ：#{@post.tag}", "/posts/tag_#{@post.tag}") %>
-        <% end %>
-      </p>
-      <p class="village-tag post-tag">
-        <% if @post.village_tag == "" %>
-          <%= link_to("村：未設定", "/posts/#{@post.id}") %>
-        <% else %>
-          <%= link_to("村：#{@post.village_tag}", "/posts/tag_#{@post.village_tag}") %>
-        <% end %>
-      </p>
-      
       <% if Like.find_by(user_id: @current_user.id, post_id: @post.id) %>
         <%= link_to("/likes/#{@post.id}/destroy", {method: "post"}) do %>
         <span class="fa fa-heart like-btn-unlike"></span>

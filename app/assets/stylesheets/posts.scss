@@ -1,4 +1,13 @@
 /* posts/index ================================ */
+.post-tags-flex {
+  display: flex;
+  margin: 20px 20px 20px 0;
+}
+
+.post-tags-flex div {
+  margin: 0 10px;
+}
+
 #js-modalwindow {
   width: 300px;
   height: 300px;
