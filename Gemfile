@@ -64,6 +64,8 @@ end
 
 #AWS S3用に追加
 gem 'aws-sdk', '~> 2'
+gem 'carrierwave'
+gem 'fog-aws'
 
 #エラーメッセージ日本語化
 gem 'rails-i18n'
