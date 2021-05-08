@@ -9,7 +9,7 @@
   flex: 3;
 }
 
-#modalButton {
+#js-modalButton {
   padding: 10px 20px;
   background: #de9044;
   border-radius: 50px;
@@ -20,7 +20,7 @@
   cursor: pointer;
 }
 
-#modalButton:hover { 
+#js-modalButton:hover { 
   filter: brightness(110%);
 }
 
