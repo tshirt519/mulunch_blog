@@ -1,4 +1,28 @@
 /* posts/index ================================ */
+
+.post-user-follow {
+  display: flex;
+}
+
+.post-user {
+  flex: 3;
+}
+
+#modalButton {
+  padding: 10px 20px;
+  background: #de9044;
+  border-radius: 50px;
+  color: #fff;
+  box-shadow: 0 2px 6px #c1ced7;
+  display: block;
+  flex: 1;
+  cursor: pointer;
+}
+
+#modalButton:hover { 
+  filter: brightness(110%);
+}
+
 .modal {
   top: 0;
   left: 0;
@@ -138,7 +162,8 @@ aside {
 }
 
 .post-user-name {
-  margin-left: 20px;
+  margin: auto 20px;
+  vertical-align: middle;
 }
 
 .post-user-image:hover {
