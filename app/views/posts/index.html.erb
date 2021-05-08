@@ -92,7 +92,8 @@
             <% end %>
           </div>
           <div class="post-time-aside">
-            <%= old_post.created_at %>
+            <%= link_to("#{old_post.user.name}", "/users/#{old_post.user.id}", class: "post-user-name") %>
+            <small><%= "#{time_ago_in_words(old_post.created_at)}前" %></small>
           </div>
 
           <% if Like.find_by(user_id: @current_user.id, post_id: old_post.id) %>

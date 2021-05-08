@@ -50,9 +50,6 @@
               <% end %>
             </div>
 
-            <div class="post-time">
-              <%= post.created_at %>
-            </div>
             <% if Like.find_by(user_id: @current_user.id, post_id: post.id) %>
               <%= link_to("/likes/#{post.id}/destroy", {method: "post"}) do %>
                 <span class="fa fa-heart like-btn-unlike"></span>
@@ -97,9 +94,10 @@
         </div>
 
         <div class="post-time-aside">
-          <%= old_post.created_at %>
+          <%= link_to("#{old_post.user.name}", "/users/#{old_post.user.id}", class: "post-user-name") %>
+          <small><%= "#{time_ago_in_words(old_post.created_at)}前" %></small>
         </div>
-
+        
         <% if Like.find_by(user_id: @current_user.id, post_id: old_post.id) %>
           <%= link_to("/likes/#{old_post.id}/destroy", {method: "post"}) do %>
             <span class="fa fa-heart like-btn-unlike"></span>
