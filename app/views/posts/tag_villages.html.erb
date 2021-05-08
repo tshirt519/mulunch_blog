@@ -18,6 +18,7 @@
             <div class="post-user">
               <%= link_to image_tag("/user_images/#{post.user.image_name}", class:"post-user-image"), "/users/#{post.user.id}" %>
               <%= link_to("#{post.user.name}", "/users/#{post.user.id}", class: "post-user-name") %>
+              <small><%= "#{time_ago_in_words(post.created_at)}前" %></small>
             </div>
             <div class="post-share">
               <a class="share-button" id="js-modalButton">シェアする</a>
