@@ -1,4 +1,28 @@
 /* posts/index ================================ */
+
+.post-user-follow {
+  display: flex;
+}
+
+.post-user {
+  flex: 3;
+}
+
+#modalButton {
+  padding: 10px 20px;
+  background: #de9044;
+  border-radius: 50px;
+  color: #fff;
+  box-shadow: 0 2px 6px #c1ced7;
+  display: block;
+  flex: 1;
+  cursor: pointer;
+}
+
+#modalButton:hover { 
+  filter: brightness(110%);
+}
+
 .modal {
   top: 0;
   left: 0;
@@ -8,12 +32,10 @@
   z-index: 100;
   height: 500vh;
   width: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  opacity: 0;
+  background: rgba(0, 0, 0, 0.7);
   transition: opacity 0.6s;
   padding: 64px;
   text-align: center;
-  pointer-events: none;
 }
 
 .posts-show .posts-index-aside {
@@ -140,7 +162,8 @@ aside {
 }
 
 .post-user-name {
-  margin-left: 20px;
+  margin: auto 20px;
+  vertical-align: middle;
 }
 
 .post-user-image:hover {
