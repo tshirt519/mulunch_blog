@@ -1,4 +1,50 @@
 /* posts/index ================================ */
+.share-description {
+  text-align: center;
+}
+
+.share-heading {
+  margin: 5px 0;
+  text-align: center;
+  color: #de9044;
+  filter: brightness(110%);
+}
+
+.share-twitter {
+  background: #52a5df;
+}
+
+.share-facebook {
+  background: #395da3;
+}
+
+.share-facebook .fa-facebook {
+  font-size: 16px;
+}
+
+.share-twitter .fa-twitter {
+  font-size: 16px;
+}
+
+.post-sns-share {
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  width: 200px;
+  height: 50px;
+  position: relative;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+  margin: 10px auto;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.post-sns-share:hover {
+  filter: brightness(120%);
+}
+
 .post-tags-flex {
   display: flex;
   margin: 20px 20px 20px 0;
@@ -19,6 +65,8 @@
   top: 0;
   bottom: 0;
   margin: auto;
+  border-radius: 12.5px;
+  padding: 25px;
 }
 
 .post-user-share {
@@ -41,8 +89,8 @@
   cursor: pointer;
 }
 
-#js-modalButton:hover { 
-  filter: brightness(110%);
+#js-modalButton:hover {
+  filter: brightness(120%);
 }
 
 .modal {
@@ -66,7 +114,7 @@
 
 .posts-show aside {
   padding: 50px 0 0;
-} 
+}
 
 .posts-show .post-tabs {
   margin: 5% 0 0 5%;
@@ -106,7 +154,7 @@
 }
 
 .post-tabs li:hover {
-  filter: brightness(110%)
+  filter: brightness(120%);
 }
 
 .post-aside-thumbnail {
@@ -335,7 +383,8 @@ aside {
   margin-left: 20px;
 }
 
-.post-menus a, .post-menus input {
+.post-menus a,
+.post-menus input {
   color: #8899a6;
   text-decoration: none;
   font-size: 14px;

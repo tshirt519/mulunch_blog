@@ -59,15 +59,17 @@
     </header>
 
     <div class="hidden" id="js-modalwindow">
-      <p>シェア機能開発中</p>
-      <p>シェア機能開発中</p>
-      <p>シェア機能開発中</p>
-      <p>シェア機能開発中</p>
-      <p>シェア機能開発中</p>
-      <p>シェア機能開発中</p>
-      <p>シェア機能開発中</p>
-    </div>
-  
+      <h3 class="share-heading">SNSで村を応援！</h3>
+      <small class="share-description">皆さんの気に入りの村をシェアして、一緒に全国の村を応援してみませんか？</small>
+      <%= link_to("http://twitter.com/share?url=#{request.url}/&hashtags=むらんち", class: "post-sns-share share-twitter") do %>
+        <i class="fa fa-twitter"></i> Twitterでシェア
+      <% end %>
+      <%= link_to("https://www.facebook.com/share.php?u=#{request.url}", class: "post-sns-share share-facebook") do %>
+        <i class="fa fa-facebook"></i> Facebookでシェア
+      <% end %>
+
+    </div>  
+
     <% if flash[:notice] %>
       <div class="flash">
         <%= flash[:notice] %>
