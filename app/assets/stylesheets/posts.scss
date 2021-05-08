@@ -1,4 +1,15 @@
 /* posts/index ================================ */
+#js-modalwindow {
+  width: 300px;
+  height: 300px;
+  background: #fff;
+  z-index: 1000;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 30%;
+  margin: auto;
+}
 
 .post-user-follow {
   display: flex;

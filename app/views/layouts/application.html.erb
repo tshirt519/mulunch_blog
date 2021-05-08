@@ -57,7 +57,17 @@
       </div>
       <a href="https://tshirt519.github.io/mulunch/#join" class="bottom-join-btn">JOIN （ 参加してみよう！）</a>
     </header>
-    
+
+    <div class="hidden" id="js-modalwindow">
+      <p>フォロー機能開発中</p>
+      <p>フォロー機能開発中</p>
+      <p>フォロー機能開発中</p>
+      <p>フォロー機能開発中</p>
+      <p>フォロー機能開発中</p>
+      <p>フォロー機能開発中</p>
+      <p>フォロー機能開発中</p>
+    </div>
+  
     <% if flash[:notice] %>
       <div class="flash">
         <%= flash[:notice] %>
@@ -106,18 +116,24 @@
     </footer>
 
     <script>
-      let modalButton = document.getElementById('modalButton');
+      let modalButton = document.getElementById('js-modalButton');
       let body = document.getElementById('js-body');
+      let modalWindow = document.getElementById('js-modalwindow');
       let modal = document.createElement('div');
+
       function createModal() {
         body.appendChild(modal);
         modal.classList.add('modal');
+        modalWindow.classList.remove('hidden');
         console.log('モーダルを作成しました');
+
       }
       function deleteModal() {
         modal.classList.remove('modal');
+        modalWindow.classList.add('hidden');
         console.log('モーダルを削除しました');
       }
+
       modalButton.addEventListener('click', createModal);
       modal.addEventListener('click', deleteModal);
     </script>
