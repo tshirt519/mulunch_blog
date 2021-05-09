@@ -1,10 +1,10 @@
 class ImageUploader < CarrierWave::Uploader::Base
   if Rails.env.development?
     storage :fog
-  elsif Rails.env.test?
-    storage :fog
-  else
-    storage :fog
+    elsif Rails.env.test?
+      storage :fog
+    else
+      storage :fog
   end
 
   def store_dir
@@ -14,11 +14,11 @@ class ImageUploader < CarrierWave::Uploader::Base
   def extension_whitelist
     %w(jpg jpeg gif png)
   end
-  # ここでファイル形式を指定する
+
   def filename
     original_filename if original_filename
   end
-end
+
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
