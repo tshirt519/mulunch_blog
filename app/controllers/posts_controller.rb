@@ -28,30 +28,30 @@ class PostsController < ApplicationController
       article5: params[:article5],
       tag: params[:tag],
       village_tag: params[:village_tag],
-      user_id: @current_user.id #adminのユーザーid
+      user_id: @current_user.id,
     )
     if params[:image1]
-      @post.thumbnail1 = "#{@post.id}_1.jpg"
+      @post.thumbnail1 = "#{@post.title}_1.jpg"
       image1 = params[:image1]
       File.binwrite("public/post_thumbnails/#{@post.thumbnail1}", image1.read)
     end
     if params[:image2]
-      @post.thumbnail2 = "#{@post.id}_2.jpg"
+      @post.thumbnail2 = "#{@post.title}_2.jpg"
       image2 = params[:image2]
       File.binwrite("public/post_thumbnails/#{@post.thumbnail2}", image2.read)
     end
     if params[:image3]
-      @post.thumbnail3 = "#{@post.id}_3.jpg"
+      @post.thumbnail3 = "#{@post.title}_3.jpg"
       image3 = params[:image3]
       File.binwrite("public/post_thumbnails/#{@post.thumbnail3}", image3.read)
     end
     if params[:image4]
-      @post.thumbnail4 = "#{@post.id}_4.jpg"
+      @post.thumbnail4 = "#{@post.title}_4.jpg"
       image4 = params[:image4]
       File.binwrite("public/post_thumbnails/#{@post.thumbnail4}", image4.read)
     end
     if params[:image5]
-      @post.thumbnail5 = "#{@post.id}_5.jpg"
+      @post.thumbnail5 = "#{@post.title}_5.jpg"
       image5 = params[:image5]
       File.binwrite("public/post_thumbnails/#{@post.thumbnail5}", image5.read)
     end
@@ -79,28 +79,29 @@ class PostsController < ApplicationController
     @post.article5 = params[:article5]
     @post.tag = params[:tag]
     @post.village_tag = params[:village_tag]
+
     if params[:image1]
-      @post.thumbnail1 = "#{@post.id}_1.jpg"
+      @post.thumbnail1 = "#{@post.title}_1.jpg"
       image1 = params[:image1]
       File.binwrite("public/post_thumbnails/#{@post.thumbnail1}", image1.read)
     end
     if params[:image2]
-      @post.thumbnail2 = "#{@post.id}_2.jpg"
+      @post.thumbnail2 = "#{@post.title}_2.jpg"
       image2 = params[:image2]
       File.binwrite("public/post_thumbnails/#{@post.thumbnail2}", image2.read)
     end
     if params[:image3]
-      @post.thumbnail3 = "#{@post.id}_3.jpg"
+      @post.thumbnail3 = "#{@post.title}_3.jpg"
       image3 = params[:image3]
       File.binwrite("public/post_thumbnails/#{@post.thumbnail3}", image3.read)
     end
     if params[:image4]
-      @post.thumbnail4 = "#{@post.id}_4.jpg"
+      @post.thumbnail4 = "#{@post.title}_4.jpg"
       image4 = params[:image4]
       File.binwrite("public/post_thumbnails/#{@post.thumbnail4}", image4.read)
     end
     if params[:image5]
-      @post.thumbnail5 = "#{@post.id}_5.jpg"
+      @post.thumbnail5 = "#{@post.title}_5.jpg"
       image5 = params[:image5]
       File.binwrite("public/post_thumbnails/#{@post.thumbnail5}", image5.read)
     end
