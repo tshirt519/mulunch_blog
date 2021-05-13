@@ -19,8 +19,8 @@
 
   <body id="js-body">
 
-  <div id="js-loading-icon">
-    aaaaaaaaaaaaaaaaa
+  <div class=".loader" id="js-loading-icon">
+
   </div>
 
     <header>
@@ -147,7 +147,20 @@
     </script>
     <script>
       let loadingIcon = document.getElementById('js-loading-icon');
+      window.addEventListener('load', () => {
+        const ms = 400;
+        loader.style.transition = 'opacity ' + ms + 'ms';
+        
+        const loaderOpacity = function(){
+          loader.style.opacity = 0;
+        }
+        const loaderDisplay = function(){
+          loader.style.display = "none";
+        }
 
+        setTimeout(loaderOpacity, 1000);
+        setTimeout(loaderDisplay, 1000 + ms);
+      });
 
     </script>
 
