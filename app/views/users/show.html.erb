@@ -1,12 +1,12 @@
 <div class="main user-show">
   <div class="container">
     <div class="user">
-      <img src="<%= "/user_images/#{@user.image_name}" %>">
+      <img src="/user_images/@user.user_image" />
       <h2><%= @user.name %></h2>
       <p><%= @user.email %></p>
       <% if @current_user == User.find_by(name: "admin_mulunch") %>
         <%= link_to("編集", "/users/#{@user.id}/edit") %>
-        <%= link_to("削除", "/users/#{@user.id}/destroy") %>
+        <%= link_to("削除", "/users/#{@user.id}/destroy", {method: :post}) %>
       <% end %>
     </div>
     
