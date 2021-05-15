@@ -63,7 +63,7 @@ group :production do
 end
 
 #AWS S3用に追加
-gem 'aws-sdk', '~> 2'
+gem 'aws-sdk-s3', require: false
 gem 'carrierwave'
 gem 'fog-aws'
 
