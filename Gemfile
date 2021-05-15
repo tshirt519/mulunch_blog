@@ -60,6 +60,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #herokuデプロイ用に追加
 group :production do
   gem 'pg'
+  gem 'fog-aws'
 end
 
 #AWS S3用に追加

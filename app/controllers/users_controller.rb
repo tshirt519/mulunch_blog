@@ -89,4 +89,8 @@ class UsersController < ApplicationController
     redirect_to("/users/index")
   end
   
+  def user_params
+    params.require(:user).permit(:picture)
+  end
+
 end
