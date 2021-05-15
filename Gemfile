@@ -63,9 +63,9 @@ group :production do
 end
 
 #AWS S3用に追加
-gem 'aws-sdk-s3', require: false
 gem 'carrierwave'
 gem 'fog-aws'
+gem "aws-sdk-s3", require: false
 
 #エラーメッセージ日本語化
 gem 'rails-i18n'
