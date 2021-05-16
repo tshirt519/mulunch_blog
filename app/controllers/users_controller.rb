@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     @user = User.new(
       name: params[:name],
       email: params[:email],
-
+      image_name: "default_user.jpg",
       password: params[:password]
     )
 
@@ -46,7 +46,7 @@ class UsersController < ApplicationController
     @user.email = params[:email]
     
     if params[:image]
-      @user.image_name = "#{@user.name}.jpg"
+      @user.image_name = "#{@user.id}.jpg"
       image = params[:image]
       File.binwrite("public/user_images/#{@user.image_name}", image.read)
     end
