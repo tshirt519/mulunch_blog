@@ -419,6 +419,10 @@ aside {
   opacity: 0.5;
 }
 
+.form-body {
+  margin: 10px 0;
+}
+
 /* レスポンシブ ================================ */
 
 @media (max-width: 1024px) {
@@ -428,7 +432,71 @@ aside {
 }
 
 @media (max-width: 640px) {
+  // posts#index
+
   .post-tabs {
     display: none;
+  }
+
+  .posts-heading {
+    font-size: 20px;
+    margin: 60px 0 0 30px;
+  }
+  
+  .posts-index-item {
+    padding: 20px 30px;
+    margin: 20px auto;
+  }
+
+  .post-title a {
+    font-size: 16px;
+  }
+
+  #js-modalButton {
+    padding: 5px 10px;
+  }
+
+  .share-button {
+    font-size: 10px;
+  }
+
+  .post-user-image {
+    width: 20px;
+    height: 20px;
+  }
+
+  .post-user-name {
+    font-size: 10px;
+  }
+
+  .post-user small {
+    font-size: 10px;
+    text-align: center;
+  }
+  
+  .post-tags-flex {
+    display: block;
+    text-align: center;
+  }
+
+  .footer-login a {
+    display: block;
+  }
+
+  // posts#show
+  .post-heading {
+    display: block;
+    padding: 0;
+  }
+
+  .post-menus {
+    justify-content: flex-end;
+    width: 100%;
+    margin: 10px 0 ;
+  }
+
+  .post-menus a {
+    margin: 0;
+    font-size: 12px;
   }
 }
