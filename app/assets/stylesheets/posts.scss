@@ -1,4 +1,52 @@
-/* posts/index ================================ */
+// タグのナビゲーションバー
+
+.post-tags-flex {
+  display: flex;
+  margin: 20px 20px 20px 0;
+}
+
+.post-tags-flex div {
+  margin: 0 10px;
+}
+
+.posts-show .post-tabs {
+  margin: 5% 0 0 5%;
+}
+
+.post-tabs {
+  margin: 10% 0 0 5%;
+  display: flex;
+}
+
+.post-tabs li a {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background: #fff;
+  box-shadow: 0 2px 6px #c1ced7;
+  display: block;
+  font-size: 1vw;
+}
+
+.post-tabs li.active a {
+  background-color: #de9044;
+}
+
+.post-tabs li.active a {
+  color: #fff;
+}
+
+.post-tabs a {
+  display: inline-block;
+  padding: 16px 30px;
+  color: #afb6bf;
+}
+
+.post-tabs li:hover {
+  filter: brightness(120%);
+}
+
+// SNSボタンとpostのヘッド部分
 .share-description {
   text-align: center;
 }
@@ -43,15 +91,6 @@
 
 .post-sns-share:hover {
   filter: brightness(120%);
-}
-
-.post-tags-flex {
-  display: flex;
-  margin: 20px 20px 20px 0;
-}
-
-.post-tags-flex div {
-  margin: 0 10px;
 }
 
 #js-modalwindow {
@@ -108,6 +147,8 @@
   text-align: center;
 }
 
+// asideのスタイリング
+
 .posts-show .posts-index-aside {
   max-width: 600px;
 }
@@ -116,45 +157,9 @@
   padding: 50px 0 0;
 }
 
-.posts-show .post-tabs {
-  margin: 5% 0 0 5%;
-}
 
 .posts-index-flex main {
   background: #f5f8fa;
-}
-
-.post-tabs {
-  margin: 10% 0 0 5%;
-  display: flex;
-}
-
-.post-tabs li a {
-  margin: 0 10px;
-  padding: 10px 20px;
-  border-radius: 50px;
-  background: #fff;
-  box-shadow: 0 2px 6px #c1ced7;
-  display: block;
-  font-size: 1vw;
-}
-
-.post-tabs li.active a {
-  background-color: #de9044;
-}
-
-.post-tabs li.active a {
-  color: #fff;
-}
-
-.post-tabs a {
-  display: inline-block;
-  padding: 16px 30px;
-  color: #afb6bf;
-}
-
-.post-tabs li:hover {
-  filter: brightness(120%);
 }
 
 .post-aside-thumbnail {
@@ -167,10 +172,6 @@
 
 .post-aside-thumbnail:hover {
   opacity: 0.6;
-}
-
-.posts-heading {
-  margin: 60px 0 0 60px;
 }
 
 .post-aside-heading {
@@ -204,12 +205,42 @@ aside {
   background-color: #f5f8fa;
 }
 
-.post-title {
-  margin: 20px 0 0;
+.post-aside-tag {
+  text-align: center;
+}
+
+.post-aside-tag a {
+  font-size: 10px;
 }
 
 .post-aside-title {
   margin: 0;
+}
+
+.post-aside-title a {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.posts-index-aside {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 2px 6px #c1ced7;
+  border-radius: 20px;
+  font-size: 10px;
+}
+
+/* posts/index ================================ */
+
+.posts-heading {
+  margin: 60px 0 0 60px;
+}
+
+.post-title {
+  margin: 20px 0 0;
 }
 
 .post-content a:hover {
@@ -276,14 +307,6 @@ aside {
   box-shadow: 0 2px 6px #c1ced7;
 }
 
-.post-aside-tag {
-  text-align: center;
-}
-
-.post-aside-tag a {
-  font-size: 10px;
-}
-
 .post-tag a:hover {
   opacity: 0.6;
 }
@@ -291,11 +314,6 @@ aside {
 .post-title a {
   font-weight: bold;
   font-size: 20px;
-}
-
-.post-aside-title a {
-  font-weight: bold;
-  font-size: 12px;
 }
 
 .post-title a:hover {
@@ -312,17 +330,6 @@ aside {
   border-radius: 20px;
 }
 
-.posts-index-aside {
-  max-width: 400px;
-  margin: 40px auto;
-  padding: 20px 30px;
-  background-color: white;
-  overflow: hidden;
-  box-shadow: 0 2px 6px #c1ced7;
-  border-radius: 20px;
-  font-size: 10px;
-}
-
 .post-user-name a {
   font-weight: 600;
 }
@@ -330,6 +337,7 @@ aside {
 .post-user-name:hover {
   color: #000;
 }
+
 
 /* posts/show ================================ */
 .posts-show-title {
@@ -406,6 +414,7 @@ aside {
 }
 
 /* posts/new ================================ */
+
 .posts-new textarea {
   font-size: 20px;
   padding: 10px;
