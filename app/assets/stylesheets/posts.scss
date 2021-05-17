@@ -46,7 +46,7 @@
   filter: brightness(120%);
 }
 
-// SNSボタンとpostのヘッド部分
+// SNSボタンとpostの見出し部分
 .share-description {
   text-align: center;
 }
@@ -328,6 +328,7 @@ aside {
   overflow: hidden;
   box-shadow: 0 2px 6px #c1ced7;
   border-radius: 20px;
+  width: 90%;
 }
 
 .post-user-name a {
