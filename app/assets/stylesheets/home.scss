@@ -224,7 +224,7 @@ a.sns-btn {
 #js-loading-icon {
   width: 100%;
   height: 100vh;
-  background-color: #de9044;
+  background-color: #fff;
   filter: brightness(110%);
   z-index: 10000;
   position: fixed;
@@ -251,7 +251,7 @@ a.sns-btn {
   display: inline-block;
   position: absolute;
   top: 100;
-  background-color: #f5f8fa;
+  background-color: #de9044;
   border-radius: 100%;
   
   -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
@@ -283,6 +283,13 @@ a.sns-btn {
   }
 }
 
+#loading-particles-js { 
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+}
+
 /* 背景装飾アニメーション ================================ */
 
 #particles-js { 
@@ -291,3 +298,4 @@ a.sns-btn {
 	width: 100%;
 	height: 100%;
 }
+
