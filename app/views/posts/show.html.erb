@@ -1,7 +1,7 @@
 <div class="main posts-show">
 
   <div class="container">
-    <ul class="post-tabs">
+    <ul class="post-tabs post-show-tabs">
       <li><%= link_to("投稿一覧", "/posts/index") %></li>
       <li><%= link_to("むらむすび", "/posts/tag_muramusubi") %></li>
       <li><%= link_to("村について", "/posts/tag_villages") %></li>
@@ -9,6 +9,18 @@
       <li><%= link_to("大鹿村", "/posts/tag_oshika") %></li>
       <li><%= link_to("東成瀬村", "/posts/tag_higashi_naruse") %></li>
     </ul>
+    
+    <div class="hidden" id="js-modalwindow">
+      <h3 class="share-heading">SNSで村を応援！</h3>
+      <small class="share-description">皆さんの気に入りの村をシェアして、一緒に全国の村を応援してみませんか？</small>
+      <%= link_to("http://twitter.com/share?url=#{request.url}&text=#{@post.title}&hashtags=むらんち&via=muramusubi", class: "post-sns-share share-twitter") do %>
+        <i class="fa fa-twitter"></i> Twitterでシェア
+      <% end %>
+      <%= link_to("https://www.facebook.com/share.php?u=#{request.url}", class: "post-sns-share share-facebook") do %>
+        <i class="fa fa-facebook"></i> Facebookでシェア
+      <% end %>
+    </div>  
+
     <h2 class="posts-heading">投稿詳細</h2>
     <div class="posts-index-item">
       <div class="post-heading">
@@ -152,3 +164,26 @@
     <% end %>
   </aside>
 </div>
+
+<script>
+  let modalButton = document.getElementById('js-modalButton');
+  let body = document.getElementById('js-body');
+  let modalWindow = document.getElementById('js-modalwindow');
+  let modal = document.createElement('div');
+
+  function createModal() {
+    body.appendChild(modal);
+    modal.classList.add('modal');
+    modalWindow.classList.remove('hidden');
+    console.log('モーダルを作成しました');
+
+  }
+  function deleteModal() {
+    modal.classList.remove('modal');
+    modalWindow.classList.add('hidden');
+    console.log('モーダルを削除しました');
+  }
+
+  modalButton.addEventListener('click', createModal);
+  modal.addEventListener('click', deleteModal);
+</script>
