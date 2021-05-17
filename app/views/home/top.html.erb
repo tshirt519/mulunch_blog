@@ -1,3 +1,9 @@
+<!-- ============================= 背景装飾アニメーション ============================= -->
+
+<div id="particles-js"></div>
+
+<!-- ============================= ローディング画面 ============================= -->
+
 <div class=".loader" id="js-loading-icon">
   <div class="spinner">
     <div class="dot1"></div>
@@ -234,9 +240,88 @@
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQya2RJqCT-wgpDmN110G1Iq8WfE-CxG4&callback=initMap">
 </script>
 <script src="https://tshirt519.github.io/mulunch/js/gallery.js"></script>
+
+<!-- ============================= ローディング画面 ============================= -->
 <script>
   setTimeout(function() {
     let loadingIcon = document.getElementById('js-loading-icon');
     loadingIcon.classList.add('loaded');
   }, 3 * 1000);
 </script>
+
+<!-- ============================= 背景装飾アニメーション ============================= -->
+
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  particlesJS("particles-js",{
+    "particles":{
+      "number":{
+        "value": 15,
+        "density":{
+          "enable": true,
+          "value_area": 1602.3971861905397
+        }
+      },
+      "color":{
+          "value": ["#EA5532", "#F6AD3C", "#FFF33F", "#00A95F", "#00ADA9", "#00AFEC","#4D4398", "#E85298", "#de9044"]
+      },
+      "shape":{
+        "type": "circle",
+        "stroke": {
+          "width": 0,
+          },
+        },
+        "opacity":{
+          "value": 1,
+          "random": true,
+          "anim":{
+            "enable": true,
+            "speed": 1.10115236356258881,
+            "opacity_min": 0,
+            "sync": false
+          }
+        },
+        "size":{
+          "value": 4.005992965476349,
+          "random": true,
+          "anim":{
+            "enable": true,
+            "speed": 24.345709068776642,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked":{
+          "enable": false,
+        },
+        "move":{
+          "enable": true,
+          "speed": 6,
+          "direction": "none",
+          "random": true,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract":{
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 600
+          }
+        }
+      },
+      "interactivity":{
+        "detect_on": "canvas",
+        "events":{
+          "onhover":{
+            "enable": false,
+          },
+          "onclick":{
+            "enable": false,
+          },
+          "resize": true
+        },
+      },
+      "retina_detect": true
+  });
+</script>
+
