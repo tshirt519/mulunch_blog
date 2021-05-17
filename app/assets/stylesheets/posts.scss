@@ -435,21 +435,34 @@ aside {
 /* レスポンシブ ================================ */
 
 @media (max-width: 1024px) {
-  aside {
-    display: none;
-  }
+ .posts-index-flex {
+   display: block;
+ }
 }
 
 @media (max-width: 640px) {
   // posts#index
 
+  .posts-index-aside {
+    width: 80%;
+    margin: 20px auto;
+  }
+
   .post-tabs {
-    display: none;
+    margin: 60px auto 0;
+    font-size: 10px;
+    overflow: scroll;
+    height: 50px;
+  }
+
+  .post-tabs li a {
+    width: 100px;
+    text-align: center;
   }
 
   .posts-heading {
     font-size: 20px;
-    margin: 60px 0 0 30px;
+    margin: 20px 0 0 20px;
   }
   
   .posts-index-item {
@@ -493,6 +506,11 @@ aside {
   }
 
   // posts#show
+  ul.post-tabs.post-show-tabs {
+    margin: 60px 0 0 0;
+    display: flex;
+  }
+
   .post-heading {
     display: block;
     padding: 0;
