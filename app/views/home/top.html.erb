@@ -2,10 +2,7 @@
 <div id="particles-js"></div>
 <!-- ============================= ローディング画面 ============================= -->
 <div class=".loader" id="js-loading-icon">
-  <div class="spinner">
-    <div class="dot1"></div>
-    <div class="dot2"></div>
-  </div>
+  <div id="loading-particles-js"></div>
 </div>
 <main>
                         <!-- ============================= トップビジュアル ============================= -->
@@ -321,3 +318,76 @@
   });
 </script>
 
+<!-- ============================= ローディング装飾 ============================= -->
+<script>
+  particlesJS("loading-particles-js",{
+    "particles":{
+      "number":{
+        "value": 100,
+        "density":{
+          "enable": true,
+          "value_area": 1602.3971861905397
+        }
+      },
+      "color":{
+          "value": ["#EA5532", "#F6AD3C", "#FFF33F", "#00A95F", "#00ADA9", "#00AFEC","#4D4398", "#E85298", "#de9044"]
+      },
+      "shape":{
+        "type": "circle",
+        "stroke": {
+          "width": 0,
+          },
+        },
+        "opacity":{
+          "value": 1,
+          "random": true,
+          "anim":{
+            "enable": true,
+            "speed": 1.10115236356258881,
+            "opacity_min": 0,
+            "sync": false
+          }
+        },
+        "size":{
+          "value": 4.005992965476349,
+          "random": true,
+          "anim":{
+            "enable": true,
+            "speed": 24.345709068776642,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked":{
+          "enable": false,
+        },
+        "move":{
+          "enable": true,
+          "speed": 6,
+          "direction": "none",
+          "random": true,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract":{
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 600
+          }
+        }
+      },
+      "interactivity":{
+        "detect_on": "canvas",
+        "events":{
+          "onhover":{
+            "enable": false,
+          },
+          "onclick":{
+            "enable": false,
+          },
+          "resize": true
+        },
+      },
+      "retina_detect": true
+  });
+</script>
