@@ -168,6 +168,7 @@
   width: 100%;
   height: auto;
   box-shadow: 0 2px 6px #c1ced7;
+  border-radius: 10px;
 }
 
 .post-aside-thumbnail:hover {
@@ -252,6 +253,10 @@ aside {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 20px;
+}
+
+.post-index-thumbnail {
+  border-radius: 10px;
 }
 
 .post-index-thumbnail:hover {
