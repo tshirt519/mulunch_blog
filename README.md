@@ -6,7 +6,7 @@
 https://mulunchblog2.herokuapp.com/
 
 ## ランディングページ(2021年1〜3月)
-ランディングページでは、HTML, CSS, Javascriptで基本的なWeb制作をの学習を進めました。
+ランディングページでは、HTML, CSS, Javascriptで基本的なWeb制作の学習を進めました。
 <img width="1680" alt="スクリーンショット 2021-05-18 23 01 05" src="https://user-images.githubusercontent.com/66429478/118668365-c3083200-b82f-11eb-8c8c-647ec0369b2a.png">
 <img width="1680" alt="スクリーンショット 2021-05-18 23 02 06" src="https://user-images.githubusercontent.com/66429478/118669761-fc8d6d00-b830-11eb-9b4d-4d0b6462d219.png">
 
