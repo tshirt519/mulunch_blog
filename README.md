@@ -1,27 +1,9 @@
-# README
+# MULUNCH BLOG
+食や地方を楽しく学べるコミュニティ、むらんちのランディングページとブログサイトです。
 
-むらんちのブログとランディングページです。
+現在herokuで公開しています。
+https://mulunchblog2.herokuapp.com/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# mulunch_blog
+ランディングページでは、基本的なHTML,CSS,Javascriptの学習を進めました。
+WebアプリケーションのCRUD操作を覚えるため、Ruby on Railsで開発しました。
+今後は、ReactやAWSなどの学習を進めつつ、ブラッシュアップをしていきます。
