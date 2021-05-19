@@ -80,9 +80,9 @@ SNSでのシェア機能も実装しています。こちらもまだまだ開�
 - created_at
 - updated_at
 
-## view一覧
+## View一覧
 1. home
-- top
+- top (ランディングページ)
 
 2. users
 - edit （ユーザー情報編集画面）
