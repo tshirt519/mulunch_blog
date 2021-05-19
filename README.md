@@ -73,5 +73,35 @@ SNSでのシェア機能も実装しています。こちらもまだまだ開�
 - tag
 - village_tag
 
+3. like
+- id
+- user_id
+- post_id
+- created_at
+- updated_at
+
+## view一覧
+1. home
+- top
+
+2. users
+- edit （ユーザー情報編集画面）
+- index （ユーザー一覧画面）
+- likes （いいね！した投稿一覧）
+- login_form （ログイン画面）
+- new （サインアップ画面）
+- show （ユーザーの投稿一覧）
+
+3. posts
+- edit （投稿編集画面）
+- index （投稿一覧画面）
+- new （新規投稿画面）
+- show （投稿詳細画面）
+- tag_muramusubi （むらむすびについての投稿一覧）
+- tag_villages （全国の村についての投稿一覧）
+- tag_ueno （上野村についての投稿一覧）
+- tag_higashi_naruse （東成瀬村についての投稿一覧）
+- tag_oshika （大鹿村についての投稿一覧）
+
 引き続き、このリポジトリを実際にサービスとして使えるよう、ブラッシュアップしていきます。
 ありがとうございました！
