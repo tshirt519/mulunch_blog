@@ -51,5 +51,27 @@ SNSでのシェア機能も実装しています。こちらもまだまだ開�
 - 投稿の閲覧・詳細表示
 - いいね！作成／削除
 
-### 引き続き、このリポジトリを実際にサービスとして使えるよう、ブラッシュアップしていきます。
-### ありがとうございました！
+##　データベース
+1. user
+- name
+- email
+- created_at
+- updated_at
+- image_name
+- password_digest
+- picture
+
+2. post
+- id
+- title
+- content
+- created_at
+- updated_at
+- user_id
+- article1-5
+- thumbnail1-5
+- tag
+- village_tag
+
+引き続き、このリポジトリを実際にサービスとして使えるよう、ブラッシュアップしていきます。
+ありがとうございました！
