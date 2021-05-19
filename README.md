@@ -3,7 +3,9 @@
 むらんちのランディングページとブログサイトを掲載しています。ポートフォリオとして作成しています。
   
 現在herokuで公開しています。  
-https://mulunchblog2.herokuapp.com/
+ランディングページ（https://mulunchblog2.herokuapp.com）
+ブログサイト(https://mulunchblog2.herokuapp.com/posts/index)
+
   
 ## ランディングページ(2021年1〜3月)
 ランディングページでは、HTML, CSS, Javascriptで基本的なWeb制作の学習を進めました。
