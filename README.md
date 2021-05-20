@@ -54,7 +54,7 @@ SNSでのシェア機能も実装しています。こちらもまだまだ開�
 - いいね！作成／削除
 - Twitter / Facebookでの投稿シェア
 
-## データベース
+## データベース（PostgreSQL）
 1. user
 - name
 - email
