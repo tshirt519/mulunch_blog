@@ -3,9 +3,8 @@
 むらんちのランディングページとブログサイトを掲載しています。ポートフォリオとして作成しています。
   
 現在herokuで公開しています。  
-ランディングページ（https://mulunchblog2.herokuapp.com）
-ブログサイト(https://mulunchblog2.herokuapp.com/posts/index)
-
+ランディングページ -> （https://mulunchblog2.herokuapp.com）  
+ブログサイト -> (https://mulunchblog2.herokuapp.com/posts/index)
   
 ## ランディングページ(2021年1〜3月)
 ランディングページでは、HTML, CSS, Javascriptで基本的なWeb制作の学習を進めました。
@@ -13,10 +12,10 @@
 <img width="1680" alt="スクリーンショット 2021-05-18 23 02 06" src="https://user-images.githubusercontent.com/66429478/118669761-fc8d6d00-b830-11eb-9b4d-4d0b6462d219.png">
   
 企画やデザインの段階から、コミュニティのメンバーから意見をもらいながら進めていきました。  
-画像編集はillustratorやphotoshopを使用し、レイアウトはセクションごとのcontainerと  
-flexboxで大枠を作りました。仲間と作ったデザイン案にpx単位で近づけるようコーディングしています。  
+画像編集はIllustratorやPhotoshopを使用し、レイアウトはセクションごとのcontainerクラスと  
+Flexboxで大枠を作りました。仲間と作ったデザイン案に、可能な限り近づけるようコーディングしています。  
   
-下記、共同制作のデザインカンプ  
+(共同制作のデザインカンプ)  
 ![C402D336-B5E0-440E-890F-673E249BEA04](https://user-images.githubusercontent.com/66429478/118952668-16e15b00-b997-11eb-95d1-092a0a1a173b.jpeg)
   
 フルスクラッチに挑戦したことで、まだまだ粗い点は残っていますが、  
@@ -35,8 +34,7 @@ flexboxで大枠を作りました。仲間と作ったデザイン案にpx単�
 それぞれに個別の権限、制限を加えてブログサイトとしました。  
 基本的なCRUD操作を学ぶため、Postモデルで記事の表示、投稿、編集、削除の機能を実装しています。  
 また、ボランティアのポータルサイトを参考に、カテゴリごとのviewや、そのナビゲーションリンク、いいね！機能や  
-SNSでのシェア機能も実装しています。こちらもまだまだ開発途中ですが、インフラやテスト、仮想環境やJavascriptの  
-ライブラリなど、より実務に近い技術を身につけていきます。  
+SNSでのシェア機能も実装しています。こちらもまだまだ開発途中ですが、AWS S3や、Reactに挑戦しています。
 
 ## バージョン情報
 - Rails 6.1.3.1
