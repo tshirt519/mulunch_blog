@@ -30,7 +30,9 @@
               <%= link_to image_tag("/post_thumbnails/#{post.thumbnail1}", class:"post-index-thumbnail"), "/posts/#{post.id}" %>
             <% end %>
             <div class="post-content">
-              <%= link_to(post.content, "/posts/#{post.id}") %>
+              <%= link_to("/posts/#{post.id}") do %>
+                <%= safe_join(post.content.split("\n"),tag(:br)) %>
+              <% end %>
             </div>
             <div class="post-tags-flex">
               <div class="post-tag">

@@ -46,7 +46,7 @@
         <a><%= @post.title %></a>
       </p>
       <p class="posts-show-content">
-        <a><%= @post.content %></a>
+        <%= safe_join(@post.content.split("\n"),tag(:br)) %>
       </p>
       
       <div class="posts-show-thumbnail">
@@ -55,7 +55,7 @@
         <% end %>
       </div>
       <div class="posts-show-article">
-          <p class="post-article"><%= @post.article1 %></p>
+          <%= safe_join(@post.article1.split("\n"),tag(:br)) %>
       </div>
       <div class="posts-show-thumbnail">
         <% if @post.thumbnail2 != nil %>
@@ -63,7 +63,7 @@
         <% end %>
       </div>
       <div class="posts-show-article">
-        <p class="post-article"><%= @post.article2 %></p>
+        <%= safe_join(@post.article2.split("\n"),tag(:br)) %>
       </div>
       <div class="posts-show-thumbnail">
         <% if @post.thumbnail3 != nil %>
@@ -71,7 +71,7 @@
         <% end %>
       </div>
       <div class="posts-show-article">
-        <p class="post-article"><%= @post.article3 %></p>
+        <%= safe_join(@post.article3.split("\n"),tag(:br)) %>
       </div>
       <div class="posts-show-thumbnail">
         <% if @post.thumbnail4 != nil %>
@@ -79,7 +79,7 @@
         <% end %>
       </div>
       <div class="posts-show-article">
-        <p class="post-article"><%= @post.article4 %></p>
+        <%= safe_join(@post.article4.split("\n"),tag(:br)) %>
       </div>
       <div class="posts-show-thumbnail">
         <% if @post.thumbnail5 != nil %>
@@ -87,7 +87,7 @@
         <% end %>
       </div>
       <div class="posts-show-article">
-        <p class="post-article"><%= @post.article5 %></p>
+        <%= safe_join(@post.article5.split("\n"),tag(:br)) %>
       </div>
 
       <div class="post-tags-flex">
