@@ -451,6 +451,19 @@ aside {
 }
 
 @media (max-width: 640px) {
+  // 共通レイアウト
+    // footerの管理者ボタン
+
+ .footer-logout-button {
+    width: 100px;
+    margin: 5px auto;
+ }
+
+  .footer-admin-button {
+    width: 100px;
+    margin: 5px auto;
+  }
+
   // posts#index
 
   .posts-index-aside {
@@ -547,6 +560,5 @@ aside {
   .post-user-name {
     margin: 0 5px;
   }
-
 
 }
