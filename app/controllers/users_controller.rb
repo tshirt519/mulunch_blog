@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :forbid_guest_user, {only: [:new, :create, :edit, :update, :destroy]}
+  before_action :forbid_signup, {only: :create}
 
   def index
     @users = User.all
@@ -99,5 +100,11 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:picture)
   end
+
+  def forbid_signup
+      flash[:alert] = "新規ユーザー登録は停止中です"
+      redirect_to("/posts/index")
+  end
+
 
 end
