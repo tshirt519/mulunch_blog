@@ -16,9 +16,12 @@
 .post-tabs {
   margin: 10% 0 0 5%;
   display: flex;
+  overflow: scroll;
+  height: 50px;
 }
 
 .post-tabs li a {
+  width: 150px;
   margin: 0 10px;
   padding: 10px 20px;
   border-radius: 50px;
@@ -26,6 +29,7 @@
   box-shadow: 0 2px 6px #c1ced7;
   display: block;
   font-size: 1vw;
+  text-align: center;
 }
 
 .post-tabs li.active a {
@@ -461,9 +465,16 @@ aside {
     height: 50px;
   }
 
+  .post-tabs li {
+    margin: auto 0;
+  }
+
   .post-tabs li a {
     width: 100px;
     text-align: center;
+    font-size: 12px;
+    margin: auto 10px;
+    padding: 5px 10px;
   }
 
   .posts-heading {
@@ -532,4 +543,10 @@ aside {
     margin: 0;
     font-size: 12px;
   }
+
+  .post-user-name {
+    margin: 0 5px;
+  }
+
+
 }
