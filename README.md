@@ -95,7 +95,7 @@ SNSでのシェア機能も実装しています。こちらもまだまだ開�
 - index （"users/index", ユーザー一覧画面）
 - likes （"users/:id/likes", いいね！した投稿一覧）
 - login_form （"login", ログイン画面）
-- new （"signup", サインアップ画面） admin
+- new （"signup", サインアップ画面） 機能停止中
 - show （"users/:id", ユーザーの投稿一覧）
 
 3. posts
