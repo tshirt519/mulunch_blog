@@ -39,6 +39,7 @@ SNSでのシェア機能も実装しています。こちらもまだまだ開�
 ## バージョン情報
 - Rails 6.1.3.1
 - Ruby 2.7.2-p137
+- PostgreSQL 13.2
 
 ## 機能一覧
 1. admin_user(管理者用)
@@ -55,7 +56,7 @@ SNSでのシェア機能も実装しています。こちらもまだまだ開�
 - いいね！作成／削除
 - Twitter / Facebookでの投稿シェア
 
-## データベース（PostgreSQL）
+## データベース
 1. user
 - name
 - email
