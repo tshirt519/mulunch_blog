@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :forbid_guest_user, {only: [:new, :create, :edit, :update, :logout, :destroy]}
+  before_action :forbid_guest_user, {only: [:new, :create, :edit, :update, :destroy]}
 
   def index
     @users = User.all
@@ -92,7 +92,7 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find_by(id: params[:id])
     @user.destroy
-    flash[:notice] = "投稿を削除しました"
+    flash[:notice] = "ユーザーを削除しました"
     redirect_to("/users/index")
   end
   
