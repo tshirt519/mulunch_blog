@@ -88,26 +88,26 @@ SNSでのシェア機能も実装しています。こちらもまだまだ開�
 
 ## View一覧
 1. home
-- top (むらんちのランディングページ)
+- top ("/", むらんちのランディングページ)
 
 2. users
-- edit （ユーザー情報編集画面）
-- index （ユーザー一覧画面）
-- likes （いいね！した投稿一覧）
-- login_form （ログイン画面）
-- new （サインアップ画面）
-- show （ユーザーの投稿一覧）
+- edit （"users/:id/edit", ユーザー情報編集画面） admin
+- index （"users/index", ユーザー一覧画面）
+- likes （"users/:id/likes", いいね！した投稿一覧）
+- login_form （"login", ログイン画面）
+- new （"signup", サインアップ画面） admin
+- show （"users/:id", ユーザーの投稿一覧）
 
 3. posts
-- edit （投稿編集画面）
-- index （投稿一覧画面、ブログサイトトップページ）
-- new （新規投稿画面）
-- show （投稿詳細画面）
-- tag_muramusubi （むらむすびについての投稿一覧）
-- tag_villages （全国の村についての投稿一覧）
-- tag_ueno （上野村についての投稿一覧）
-- tag_higashi_naruse （東成瀬村についての投稿一覧）
-- tag_oshika （大鹿村についての投稿一覧）
+- edit （"posts/:id/edit", 投稿編集画面） admin
+- index （"posts/index", 投稿一覧画面、ブログサイトトップ）
+- new （"posts/new", 新規投稿画面） admin
+- show （"posts/:id", 投稿詳細画面）
+- tag_muramusubi （"posts/tag_muramusubi", むらむすびについての投稿一覧）
+- tag_villages （"posts/tag_villages", 全国の村についての投稿一覧）
+- tag_ueno （"posts/tag_ueno", 上野村についての投稿一覧）
+- tag_higashi_naruse （"posts/tag_higashi_naruse", 東成瀬村についての投稿一覧）
+- tag_oshika （"posts/tag_oshika", 大鹿村についての投稿一覧）
   
 引き続き、このリポジトリを実際にサービスとして使えるよう、ブラッシュアップしていきます。  
 ありがとうございました！  
