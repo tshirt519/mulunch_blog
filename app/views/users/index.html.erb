@@ -4,7 +4,7 @@
     <% @users.each do |user| %>
       <div class="users-index-item">
         <div class="user-left">
-          <img alt="ユーザー画像" src="<%= "/user_images/#{user.image_name}" %>">
+          <%= image_tag("https://mulunchimage.s3-ap-northeast-1.amazonaws.com/users/#{user.name}.jpg" )%>
         </div>
         <div class="user-right">
           <%= link_to(user.name, "/users/#{user.id}") %>

@@ -95,7 +95,7 @@
           <div class="footer-login">
             <% if @current_user != User.find_by(name: "guest_mulunch") %>
               <div>
-                <%= link_to image_tag("/user_images/#{@current_user.image_name}", class:"post-user-image footer-user-image"), "/users/#{@current_user.id}" %>
+                <%= link_to image_tag("https://mulunchimage.s3-ap-northeast-1.amazonaws.com/users/#{@current_user.name}.jpg", class:"post-user-image footer-user-image"), "/users/#{@current_user.id}" %>
                 <%= link_to("#{@current_user.name}", "/users/#{@current_user.id}", class: "footer-admin-name") %>
               </div>
               <div class="footer-controller">  
@@ -104,7 +104,7 @@
                 <%= link_to("ログアウト", "/logout", method: :post, class: "footer-logout-button") %>
               </div>
             <% else %>
-              <%= link_to image_tag("/user_images/#{@current_user.image_name}", class:"post-user-image footer-user-image"), "/users/#{@current_user.id}" %>
+              <%= link_to image_tag("https://mulunchimage.s3-ap-northeast-1.amazonaws.com/users/#{@current_user.name}.jpg", class:"post-user-image footer-user-image"), "/users/#{@current_user.id}" %>
               <%= link_to("#{@current_user.name}", "/users/#{@current_user.id}", class: "footer-admin-name") %>
               <%= link_to("管理者ログイン", "/login", class: "footer-admin-button") %>
             <% end %>
