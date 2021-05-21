@@ -41,8 +41,9 @@ SNSでのシェア機能も実装しています。まだまだ開発途中で�
 ## バージョン情報
 - Rails 6.1.3.1
 - Ruby 2.7.2-p137
+- Heroku 7.51.0 darwin-x64 node-v12.21.0
 - PostgreSQL 13.2
-- AWS S3 (現在表示のみ)
+- AWS S3 (現在ファイル表示のみ)
 
 ## 機能一覧
 1. admin_user（管理者用）
