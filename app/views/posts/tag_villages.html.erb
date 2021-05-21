@@ -28,7 +28,7 @@
               <%= link_to(post.title, "/posts/#{post.id}") %>
             </div>
             <% if post.thumbnail1 != nil %>
-              <%= link_to image_tag("/post_thumbnails/#{post.thumbnail1}", class:"post-index-thumbnail"), "/posts/#{post.id}" %>
+              <%= link_to image_tag("https://mulunchimage.s3-ap-northeast-1.amazonaws.com/posts/#{post.thumbnail1}", class:"post-index-thumbnail"), "/posts/#{post.id}" %>
             <% end %>
             <div class="post-content">
               <%= link_to("/posts/#{post.id}") do %>
@@ -78,7 +78,9 @@
         <div class="post-aside-title">
           <%= link_to(old_post.title, "/posts/#{old_post.id}") %>
         </div>
-        <%= link_to image_tag("/post_thumbnails/#{old_post.thumbnail1}", class:"post-aside-thumbnail"), "/posts/#{old_post.id}" %>
+        <% if old_post.thumbnail1 != nil %>
+          <%= link_to image_tag("https://mulunchimage.s3-ap-northeast-1.amazonaws.com/posts/#{old_post.thumbnail1}", class:"post-aside-thumbnail"), "/posts/#{old_post.id}" %>
+        <% end %>
         <div class="post-tag post-aside-tag">
           <% if old_post.tag == "" %>
             <%= link_to("タグ：未設定", "/posts/#{old_post.id}") %>

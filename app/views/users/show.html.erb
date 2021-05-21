@@ -29,7 +29,7 @@
             <%= link_to(post.title, "/posts/#{post.id}") %>
           </div>
           <% if post.thumbnail1 != nil %>
-            <%= link_to image_tag("/post_thumbnails/#{post.thumbnail1}", class:"post-index-thumbnail"), "/posts/#{post.id}" %>
+            <%= link_to image_tag("https://mulunchimage.s3-ap-northeast-1.amazonaws.com/posts/#{post.thumbnail1}", class:"post-index-thumbnail"), "/posts/#{post.id}" %>
           <% end %>
           <div class="post-content">
             <%= link_to(post.content, "/posts/#{post.id}") %>
