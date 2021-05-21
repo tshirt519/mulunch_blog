@@ -1,11 +1,12 @@
 <div class="main user-show">
   <div class="container">
     <div class="user">
-      <img alt="ユーザー画像" src="<%= "/user_images/#{@user.image_name}" %>">
+      <%= image_tag("https://mulunchimage.s3-ap-northeast-1.amazonaws.com/users/#{@user.name}.jpg" )%>
       <h2><%= @user.name %></h2>
       <p><%= @user.email %></p>
-      <% if @user.id == @current_user.id %>
+      <% if @current_user == User.find_by(name: "admin_mulunch") %>
         <%= link_to("編集", "/users/#{@user.id}/edit") %>
+        <%= link_to("削除", "/users/#{@user.id}/destroy") %>
       <% end %>
     </div>
     
