@@ -26,7 +26,7 @@
       <div class="post-heading">
         <div class="post-user-share">
           <div class="post-user">
-            <%= link_to image_tag("/user_images/#{@post.user.image_name}", class:"post-user-image"), "/users/#{@post.user.id}" %>
+            <%= link_to image_tag("https://mulunchimage.s3-ap-northeast-1.amazonaws.com/users/#{@post.user.name}.jpg", class:"post-user-image"), "/users/#{@post.user.id}" %>
             <%= link_to("#{@post.user.name}", "/users/#{@post.user.id}", class: "post-user-name") %>
             <small><%= "#{time_ago_in_words(@post.created_at)}前" %></small>
           </div>
