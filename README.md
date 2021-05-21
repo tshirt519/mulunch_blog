@@ -26,11 +26,8 @@ Flexboxで大枠を作りました。仲間から貰ったデザイン案に可�
 ## ブログサイト(2021年4月〜現在)
 ブログサイトでは、LPでの学びをベースにRuby on Railsを利用してWeb開発の基礎を学びました。  
 <img width="1680" alt="スクリーンショット 2021-05-18 23 07 51" src="https://user-images.githubusercontent.com/66429478/118675249-67d93e00-b835-11eb-9445-202cb3f3ba83.png">
-<img width="1680" alt="スクリーンショット 2021-05-19 0 20 54" src="https://user-images.githubusercontent.com/66429478/118678685-30b85c00-b838-11eb-9c14-56f58f802c33.png">
-  
-当初はNode.jsやExpress、Reactなどを学習しており、Javascriptを網羅する機会とする予定でしたが、  
-志望企業の募集要項を確認し、Ruby, Railsを採用してバックエンドやインフラを広く学ぶことに決めました。  
-  
+<img width="1680" alt="スクリーンショット 2021-05-19 0 20 54" src="https://user-images.githubusercontent.com/66429478/118678685-30b85c00-b838-11eb-9c14-56f58f802c33.png">　　
+　　
 開発の目的としては、ボランティア団体のオウンドメディアとして、食や地域に対してより興味・関心の高い  
 ユーザーに来訪してもらえるような、良質なコンテンツをストックしておける場所を作ることでした。  
   
