@@ -3,8 +3,8 @@
     <div class="user">
       <%= image_tag("https://mulunchimage.s3-ap-northeast-1.amazonaws.com/users/#{@user.name}.jpg" )%>
       <h2><%= @user.name %></h2>
-      <p><%= @user.email %></p>
       <% if @current_user == User.find_by(name: "admin_mulunch") %>
+        <p><%= @user.email %></p>
         <%= link_to("編集", "/users/#{@user.id}/edit") %>
         <%= link_to("削除", "/users/#{@user.id}/destroy", {method: :post}) %>
       <% end %>
