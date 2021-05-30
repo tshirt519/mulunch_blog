@@ -1,120 +1,121 @@
+<!-- 全国の村についての投稿一覧 -->
 
 <div class="posts-index-flex">
-<main>
-  <div class="main posts-index">
-    <div class="container">
-        <ul class="post-tabs">
-          <li><%= link_to("投稿一覧", "/posts/index") %></li>
-          <li><%= link_to("むらむすび", "/posts/tag_muramusubi") %></li>
-          <li class="active"><%= link_to("村について", "/posts/tag_villages") %></li>
-          <li><%= link_to("上野村", "/posts/tag_ueno") %></li>
-          <li><%= link_to("大鹿村", "/posts/tag_oshika") %></li>
-          <li><%= link_to("東成瀬村", "/posts/tag_higashi_naruse") %></li>
-        </ul>
-      <h1 class="posts-heading">全国の村について</h1>
-      <% @posts.each do |post| %>
-        <div class="posts-index-item">
-          <div class="post-user-share">
-            <div class="post-user">
-              <%= link_to image_tag("https://mulunchimage.s3-ap-northeast-1.amazonaws.com/users/#{post.user.name}.jpg", class:"post-user-image"), "/users/#{post.user.id}" %>
-              <%= link_to("#{post.user.name}", "/users/#{post.user.id}", class: "post-user-name") %>
-              <small><%= "#{time_ago_in_words(post.created_at)}前" %></small>
+  <main>
+    <div class="main posts-index">
+      <div class="container">
+          <ul class="post-tabs">
+            <li><%= link_to("投稿一覧", "/posts/index") %></li>
+            <li><%= link_to("むらむすび", "/posts/tag_muramusubi") %></li>
+            <li class="active"><%= link_to("村について", "/posts/tag_villages") %></li>
+            <li><%= link_to("上野村", "/posts/tag_ueno") %></li>
+            <li><%= link_to("大鹿村", "/posts/tag_oshika") %></li>
+            <li><%= link_to("東成瀬村", "/posts/tag_higashi_naruse") %></li>
+          </ul>
+        <h1 class="posts-heading">全国の村について</h1>
+        <% @posts[0..4].each do |post| %>
+          <div class="posts-index-item">
+            <div class="post-user-share">
+              <div class="post-user">
+                <%= link_to image_tag("https://mulunchimage.s3-ap-northeast-1.amazonaws.com/users/#{post.user.name}.jpg", class:"post-user-image"), "/users/#{post.user.id}" %>
+                <%= link_to("#{post.user.name}", "/users/#{post.user.id}", class: "post-user-name") %>
+                <small><%= "#{time_ago_in_words(post.created_at)}前" %></small>
+              </div>
+
             </div>
 
-          </div>
-
-          <div class="post-main">
-            <div class="post-title">
-              <%= link_to(post.title, "/posts/#{post.id}") %>
-            </div>
-            <% if post.thumbnail1 != nil %>
-              <%= link_to image_tag("https://mulunchimage.s3-ap-northeast-1.amazonaws.com/posts/#{post.thumbnail1}", class:"post-index-thumbnail"), "/posts/#{post.id}" %>
-            <% end %>
-            <div class="post-content">
-              <%= link_to("/posts/#{post.id}") do %>
-                <%= safe_join(post.content.split("\n"),tag(:br)) %>
+            <div class="post-main">
+              <div class="post-title">
+                <%= link_to(post.title, "/posts/#{post.id}") %>
+              </div>
+              <% if post.thumbnail1 != nil %>
+                <%= link_to image_tag("https://mulunchimage.s3-ap-northeast-1.amazonaws.com/posts/#{post.thumbnail1}", class:"post-index-thumbnail"), "/posts/#{post.id}" %>
               <% end %>
-            </div>
-            <div class="post-tags-flex">
-              <div class="post-tag">
-                <% if post.tag == "" %>
-                  <%= link_to("タグ：未設定", "/posts/#{post.id}") %>
-                <% else %>
-                  <%= link_to("タグ：#{post.tag}", "/posts/tag_#{post.tag}") %>
+              <div class="post-content">
+                <%= link_to("/posts/#{post.id}") do %>
+                  <%= safe_join(post.content.split("\n"),tag(:br)) %>
                 <% end %>
               </div>
-              <div class="village-tag post-tag">
-                <% if post.village_tag == "" %>
-                  <%= link_to("村：未設定", "/posts/#{post.id}") %>
-                <% else %>
-                  <%= link_to("村：#{post.village_tag}", "/posts/tag_#{post.village_tag}") %>
-                <% end %>
+              <div class="post-tags-flex">
+                <div class="post-tag">
+                  <% if post.tag == "" %>
+                    <%= link_to("タグ：未設定", "/posts/#{post.id}") %>
+                  <% else %>
+                    <%= link_to("タグ：#{post.tag}", "/posts/tag_#{post.tag}") %>
+                  <% end %>
+                </div>
+                <div class="village-tag post-tag">
+                  <% if post.village_tag == "" %>
+                    <%= link_to("村：未設定", "/posts/#{post.id}") %>
+                  <% else %>
+                    <%= link_to("村：#{post.village_tag}", "/posts/tag_#{post.village_tag}") %>
+                  <% end %>
+                </div>
               </div>
+
+              <% if Like.find_by(user_id: @current_user.id, post_id: post.id) %>
+                <%= link_to("/likes/#{post.id}/destroy", {method: "post"}) do %>
+                  <span class="fa fa-heart like-btn-unlike"></span>
+                <% end %>
+              <% else %>
+                <%= link_to("/likes/#{post.id}/create", {method: "post"}) do %>
+                  <span class="fa fa-heart like-btn"></span>
+                <% end %>
+              <% end %>
+              <% @likes_count = Like.where(post_id: post.id).count %>
+              <%= @likes_count %>
             </div>
-
-            <% if Like.find_by(user_id: @current_user.id, post_id: post.id) %>
-              <%= link_to("/likes/#{post.id}/destroy", {method: "post"}) do %>
-                <span class="fa fa-heart like-btn-unlike"></span>
-              <% end %>
-            <% else %>
-              <%= link_to("/likes/#{post.id}/create", {method: "post"}) do %>
-                <span class="fa fa-heart like-btn"></span>
-              <% end %>
-            <% end %>
-            <% @likes_count = Like.where(post_id: post.id).count %>
-            <%= @likes_count %>
           </div>
-        </div>
-      <% end %>
-    </div>
-  </div>
-</main>
-
-<aside>
-  <h3 class="post-aside-heading">過去の投稿</h3>
-  <% @old_posts.each do |old_post| %>
-    <div class="posts-index-aside">
-      <div class="post-aside-main">
-        <div class="post-aside-title">
-          <%= link_to(old_post.title, "/posts/#{old_post.id}") %>
-        </div>
-        <% if old_post.thumbnail1 != nil %>
-          <%= link_to image_tag("https://mulunchimage.s3-ap-northeast-1.amazonaws.com/posts/#{old_post.thumbnail1}", class:"post-aside-thumbnail"), "/posts/#{old_post.id}" %>
         <% end %>
-        <div class="post-tag post-aside-tag">
-          <% if old_post.tag == "" %>
-            <%= link_to("タグ：未設定", "/posts/#{old_post.id}") %>
-          <% else %>
-            <%= link_to("タグ：#{old_post.tag}", "/posts/tag_#{old_post.tag}") %>
-          <% end %>
-        </div>
-
-        <div class="village-tag post-tag post-aside-tag">
-          <% if old_post.village_tag == "" %>
-            <%= link_to("村：未設定", "/posts/#{old_post.id}") %>
-          <% else %>
-            <%= link_to("村：#{old_post.village_tag}", "/posts/tag_#{old_post.village_tag}") %>
-          <% end %>
-        </div>
-
-        <div class="post-time-aside">
-          <%= link_to("#{old_post.user.name}", "/users/#{old_post.user.id}", class: "post-user-name") %>
-          <small><%= "#{time_ago_in_words(old_post.created_at)}前" %></small>
-        </div>
-
-        <% if Like.find_by(user_id: @current_user.id, post_id: old_post.id) %>
-          <%= link_to("/likes/#{old_post.id}/destroy", {method: "post"}) do %>
-            <span class="fa fa-heart like-btn-unlike"></span>
-          <% end %>
-        <% else %>
-          <%= link_to("/likes/#{old_post.id}/create", {method: "post"}) do %>
-            <span class="fa fa-heart like-btn"></span>
-          <% end %>
-        <% end %>
-        <% @likes_count = Like.where(post_id: old_post.id).count %>
-        <%= @likes_count %>
       </div>
     </div>
-  <% end %>
-</aside>
+  </main>
+
+  <aside>
+    <h3 class="post-aside-heading">過去の投稿</h3>
+    <% @old_posts[0..4].each do |old_post| %>
+      <div class="posts-index-aside">
+        <div class="post-aside-main">
+          <div class="post-aside-title">
+            <%= link_to(old_post.title, "/posts/#{old_post.id}") %>
+          </div>
+          <% if old_post.thumbnail1 != nil %>
+            <%= link_to image_tag("https://mulunchimage.s3-ap-northeast-1.amazonaws.com/posts/#{old_post.thumbnail1}", class:"post-aside-thumbnail"), "/posts/#{old_post.id}" %>
+          <% end %>
+          <div class="post-tag post-aside-tag">
+            <% if old_post.tag == "" %>
+              <%= link_to("タグ：未設定", "/posts/#{old_post.id}") %>
+            <% else %>
+              <%= link_to("タグ：#{old_post.tag}", "/posts/tag_#{old_post.tag}") %>
+            <% end %>
+          </div>
+
+          <div class="village-tag post-tag post-aside-tag">
+            <% if old_post.village_tag == "" %>
+              <%= link_to("村：未設定", "/posts/#{old_post.id}") %>
+            <% else %>
+              <%= link_to("村：#{old_post.village_tag}", "/posts/tag_#{old_post.village_tag}") %>
+            <% end %>
+          </div>
+
+          <div class="post-time-aside">
+            <%= link_to("#{old_post.user.name}", "/users/#{old_post.user.id}", class: "post-user-name") %>
+            <small><%= "#{time_ago_in_words(old_post.created_at)}前" %></small>
+          </div>
+
+          <% if Like.find_by(user_id: @current_user.id, post_id: old_post.id) %>
+            <%= link_to("/likes/#{old_post.id}/destroy", {method: "post"}) do %>
+              <span class="fa fa-heart like-btn-unlike"></span>
+            <% end %>
+          <% else %>
+            <%= link_to("/likes/#{old_post.id}/create", {method: "post"}) do %>
+              <span class="fa fa-heart like-btn"></span>
+            <% end %>
+          <% end %>
+          <% @likes_count = Like.where(post_id: old_post.id).count %>
+          <%= @likes_count %>
+        </div>
+      </div>
+    <% end %>
+  </aside>
 </div>

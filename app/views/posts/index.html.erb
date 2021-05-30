@@ -1,8 +1,10 @@
+<!-- 最新の投稿ページ -->
 
 <div class="posts-index-flex">
   <main>
     <div class="main posts-index">
       <div class="container">
+         <!-- タグ毎のリンク -->
           <ul class="post-tabs">
             <li class="active"><%= link_to("投稿一覧", "/posts/index") %></li>
             <li><%= link_to("むらむすび", "/posts/tag_muramusubi") %></li>
@@ -11,9 +13,13 @@
             <li><%= link_to("大鹿村", "/posts/tag_oshika") %></li>
             <li><%= link_to("東成瀬村", "/posts/tag_higashi_naruse") %></li>
           </ul>
+
         <h1 class="posts-heading">最新の投稿</h1>
-        <% @posts.each do |post| %>
+      <!-- 投稿増えたら新たに[5..9]をfetchするボタンかページ要作成 -->
+        <% @posts[0..4].each_with_index do |post| %>
           <div class="posts-index-item">
+
+         <!-- 投稿のヘッド部分 -->
             <div class="post-user-share">
               <div class="post-user">
                 <%= link_to image_tag("https://mulunchimage.s3-ap-northeast-1.amazonaws.com/users/#{post.user.name}.jpg", class:"post-user-image"), "/users/#{post.user.id}" %>
@@ -22,6 +28,7 @@
               </div>
             </div>
 
+           <!-- 投稿の内容部分 -->
             <div class="post-main">
               <div class="post-title">
                 <%= link_to(post.title, "/posts/#{post.id}") %>
@@ -34,6 +41,7 @@
                   <%= safe_join(post.content.split("\n"),tag(:br)) %>
                 <% end %>
               </div>
+
               <div class="post-tags-flex">
                 <div class="post-tag">
                   <% if post.tag == "" %>
@@ -69,9 +77,10 @@
     </div>
   </main>
 
+  <!-- asideでは過去の投稿表示 -->
   <aside>
     <h3 class="post-aside-heading">過去の投稿</h3>
-    <% @old_posts.each do |old_post| %>
+    <% @old_posts[0..4].each do |old_post| %>
       <div class="posts-index-aside">
         <div class="post-aside-main">
           <div class="post-aside-title">
