@@ -1,7 +1,9 @@
+<!-- ユーザー一覧ページ-->
+
 <div class="main users-index">
   <div class="container">
     <h1 class="users-heading">ユーザー一覧</h1>
-    <% @users.each do |user| %>
+    <% @users[0..4].each do |user| %>
       <div class="users-index-item">
         <div class="user-left">
           <%= image_tag("https://mulunchimage.s3-ap-northeast-1.amazonaws.com/users/#{user.name}.jpg" )%>

@@ -1,6 +1,8 @@
+<!-- 投稿編集ページ -->
+
 <div class="main posts-new">
   <div class="container">
-    <h1 class="posts-heading">編集する</h1>
+    <h1 class="posts-heading">投稿の編集</h1>
     <%= form_tag("/posts/#{@post.id}/update", {multipart: true}) do %>
       <div class="form">
         <div class="form-body">
