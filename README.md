@@ -14,9 +14,10 @@
   
 企画やデザインの段階から、コミュニティのメンバーから意見をもらいながら進めていきました。  
 画像編集はIllustratorやPhotoshopを使用し、レイアウトはセクションごとの.containerクラスと  
-Flexboxで大枠を作りました。仲間から貰ったデザイン案に可能な限り近づけるようコーディングしました。  
-レスポンシブのワイヤーフレームは制作していなかったため、flexを解除していく形で自分で行いました。
-Javascriptの理解のため、一部APIや配列のデータのやりとりや、それを元にしたDOM操作をして描画しています。
+Flexboxで大枠を作りました。仲間から貰ったデザイン案に可能な限り近づけるようコーディングしました。　　
+
+レスポンシブのワイヤーフレームは制作していなかったため、flexを解除していく形で自分で行いました。  
+Javascriptの理解のため、一部APIやオブジェクトのデータのやりとりや、DOM操作をして描画しています。
   
 （共同制作のデザインカンプ）  
 ![C402D336-B5E0-440E-890F-673E249BEA04](https://user-images.githubusercontent.com/66429478/118952668-16e15b00-b997-11eb-95d1-092a0a1a173b.jpeg)
@@ -38,9 +39,9 @@ Javascriptの理解のため、一部APIや配列のデータのやりとりや�
 それぞれに個別の権限、制限を加えてライターと読者のシンプルなブログサイトとしました。  
 基本的なCRUD操作を学ぶため、Postモデルで記事の表示、投稿、編集、削除の機能を実装しています。  
   
-また、ボランティアのポータルサイトを参考に、カテゴリごとのviewや、そのナビゲーションリンク、いいね！機能や  
+また、ボランティアのポータルサイトを参考に、カテゴリごとのViewや、そのナビゲーションリンク、いいね！機能や  
 SNSでのシェア機能も実装しています。足元ではS3でのファイル処理の実装中（表示のみ完了）、参考サイトをもとに  
-機能やデザインを整え、テストや仮想環境、CI/CDやIaasの利用、ViewのReact化を目指し学習中です。　　
+機能やデザインを整え、テストや仮想環境、CI/CDやIaasの利用、Reactの導入のためリニューアル予定です。　　
   
 ## バージョン情報
 - Rails 6.1.3.1
@@ -101,23 +102,23 @@ SNSでのシェア機能も実装しています。足元ではS3でのファイ
 - top ("/", むらんちのランディングページ)
 
 2. users
-- edit （"users/:id/edit", ユーザー情報編集画面） admin
-- index （"users/index", ユーザー一覧画面）
-- likes （"users/:id/likes", いいね！した投稿一覧）
-- login_form （"login", ログイン画面）
-- new （"signup", サインアップ画面） 機能制限中
-- show （"users/:id", ユーザーの投稿一覧）
+- edit "users/:id/edit", (ユーザー情報編集画面） admin
+- index "users/index", (ユーザー一覧画面）
+- likes "users/:id/likes", (いいね！した投稿一覧）
+- login_form "login", (ログイン画面）
+- new "signup", (サインアップ画面） 機能制限中
+- show "users/:id", (ユーザーの投稿一覧）
 
 3. posts
-- edit （"posts/:id/edit", 投稿編集画面）admin
-- index （"posts/index", 投稿一覧画面、ブログサイトトップ）
-- new （"posts/new", 新規投稿画面） admin
-- show （"posts/:id", 投稿詳細画面）
-- tag_muramusubi （"posts/tag_muramusubi", むらむすびについての投稿一覧）
-- tag_villages （"posts/tag_villages", 全国の村についての投稿一覧）
-- tag_ueno （"posts/tag_ueno", 上野村についての投稿一覧）
-- tag_higashi_naruse （"posts/tag_higashi_naruse", 東成瀬村についての投稿一覧）
-- tag_oshika （"posts/tag_oshika", 大鹿村についての投稿一覧）
+- edit "posts/:id/edit", (投稿編集画面） admin
+- index "posts/index", (投稿一覧画面、ブログサイトトップ）
+- new "posts/new", (新規投稿画面） admin
+- show "posts/:id", (投稿詳細画面）
+- tag_muramusubi "posts/tag_muramusubi", (むらむすびについての投稿一覧）
+- tag_villages "posts/tag_villages", (全国の村についての投稿一覧）
+- tag_ueno "posts/tag_ueno", (上野村についての投稿一覧）
+- tag_higashi_naruse "posts/tag_higashi_naruse", (東成瀬村についての投稿一覧）
+- tag_oshika "posts/tag_oshika", (大鹿村についての投稿一覧）
   
-引き続き、このリポジトリを実際にサービスとして使えるよう、ブラッシュアップしていきます。  
+引き続き、このリポジトリを正式にリリースできるようブラッシュアップしていきます。 
 ご覧いただき、ありがとうございました。
