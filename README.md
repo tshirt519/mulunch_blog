@@ -26,6 +26,7 @@ Javascriptの理解のため、一部APIや配列のデータのやりとりや�
   
 ## ブログサイト(2021年4月〜現在)
 ブログサイトでは、LPでの学びをベースにRuby on Railsを利用してWeb開発の基礎を学びました。  
+  
 <img width="1680" alt="スクリーンショット 2021-05-18 23 07 51" src="https://user-images.githubusercontent.com/66429478/118675249-67d93e00-b835-11eb-9445-202cb3f3ba83.png">
 <img width="1680" alt="スクリーンショット 2021-05-19 0 20 54" src="https://user-images.githubusercontent.com/66429478/118678685-30b85c00-b838-11eb-9c14-56f58f802c33.png">　　
 　　
