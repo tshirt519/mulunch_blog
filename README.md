@@ -3,8 +3,8 @@
 むらんちのランディングページと、ブログサイトを掲載しています。
   
 現在Herokuで公開しています。（初回、ロードに一定時間要します）  
-ランディングページ -> （https://mulunchblog2.herokuapp.com）  
-ブログサイト -> (https://mulunchblog2.herokuapp.com/posts/index)
+ランディングページ -> https://mulunchblog2.herokuapp.com  
+ブログサイト -> https://mulunchblog2.herokuapp.com/posts/index  
   
 ## ランディングページ（2021年2〜3月）
 ランディングページでは、HTML, CSS, Javascriptで基本的なWeb制作の学習を進めました。  
