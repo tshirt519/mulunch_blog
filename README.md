@@ -27,7 +27,7 @@ Javascriptの理解のため、APIやオブジェクトのデータのやりと�
 ブログサイトでは、LPでの学びをベースにRuby on Railsを利用してWeb開発の基礎を学びました。  
   
 <img width="1680" alt="スクリーンショット 2021-05-18 23 07 51" src="https://user-images.githubusercontent.com/66429478/118675249-67d93e00-b835-11eb-9445-202cb3f3ba83.png">
-<img width="1680" alt="スクリーンショット 2022-01-12 9 56 23" src="https://user-images.githubusercontent.com/66429478/149044877-6575fe7d-a09a-4bd6-b9d2-e0a8da368243.png">
+<img width="1680" alt="スクリーンショット 2022-01-12 10 09 05" src="https://user-images.githubusercontent.com/66429478/149045997-b5899ab1-9c4f-412b-8e40-b921ac0a2651.png">
   
 開発の目的としては、非営利活動組織のオウンドメディアとして、地域や食に対してより興味・関心の高い  
 ユーザーに来訪してもらえるようなコンテンツをストックしておける場所を作ることでした。  
