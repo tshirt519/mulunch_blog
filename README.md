@@ -27,8 +27,8 @@ Javascriptの理解のため、APIやオブジェクトのデータのやりと�
 ブログサイトでは、LPでの学びをベースにRuby on Railsを利用してWeb開発の基礎を学びました。  
   
 <img width="1680" alt="スクリーンショット 2021-05-18 23 07 51" src="https://user-images.githubusercontent.com/66429478/118675249-67d93e00-b835-11eb-9445-202cb3f3ba83.png">
-<img width="1680" alt="スクリーンショット 2021-05-19 0 20 54" src="https://user-images.githubusercontent.com/66429478/118678685-30b85c00-b838-11eb-9c14-56f58f802c33.png">
-
+<img width="1680" alt="スクリーンショット 2022-01-12 9 56 23" src="https://user-images.githubusercontent.com/66429478/149044877-6575fe7d-a09a-4bd6-b9d2-e0a8da368243.png">
+  
 開発の目的としては、非営利活動組織のオウンドメディアとして、地域や食に対してより興味・関心の高い  
 ユーザーに来訪してもらえるようなコンテンツをストックしておける場所を作ることでした。  
 また、フレームワークを用いてMVCモデル、DBの扱いを把握しWeb開発の概観を掴むことを目標としました。  
